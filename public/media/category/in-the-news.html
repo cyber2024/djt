@@ -1,0 +1,382 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Make America Hate Again! | Donald Jay Trump for President</title>
+<meta name='keywords' content=''/>
+<meta name='description' content='Donald Jay Trump is the very definition of entitlement, continually lowering the standards of excellence in business, real estate and entertainment. Show disdain for his presidential campaign here.'/>
+<link rel='canonical' href='https://djt.herokuapp.com'/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 
+<script src="https://assets.adobedtm.com/ccb66fd3556ba80512894ddaac0f1024ce58d90d/satelliteLib-dd574bd6e7e9efe3999269eb66caa610091049a9.js"></script>
+<link rel="shortcut icon" href="https://assets.donaldjtrump.com/_july16/icons/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="https://assets.donaldjtrump.com/_july16/icons/57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://assets.donaldjtrump.com/_july16/icons/60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://assets.donaldjtrump.com/_july16/icons/72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://assets.donaldjtrump.com/_july16/icons/76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://assets.donaldjtrump.com/_july16/icons/114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://assets.donaldjtrump.com/_july16/icons/120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://assets.donaldjtrump.com/_july16/icons/144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://assets.donaldjtrump.com/_july16/icons/152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://assets.donaldjtrump.com/_july16/icons/180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://assets.donaldjtrump.com/_july16/icons/192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://assets.donaldjtrump.com/_july16/icons/32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://assets.donaldjtrump.com/_july16/icons/96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://assets.donaldjtrump.com/_july16/icons/16x16.png">
+<script>
+    (function(w){var loadCSS=function(href,before,media){var doc=w.document;var ss=doc.createElement("link");var ref;if(before)ref=before;else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";function ready(cb){if(doc.body)return cb();setTimeout(function(){ready(cb)})}ready(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){var resolvedHref=
+    ss.href;var i=sheets.length;while(i--)if(sheets[i].href===resolvedHref)return cb();setTimeout(function(){onloadcssdefined(cb)})};function loadCB(){if(ss.addEventListener)ss.removeEventListener("load",loadCB);ss.media=media||"all"}if(ss.addEventListener)ss.addEventListener("load",loadCB);ss.onloadcssdefined=onloadcssdefined;onloadcssdefined(loadCB);return ss};if(typeof exports!=="undefined")exports.loadCSS=loadCSS;else w.loadCSS=loadCSS})(typeof global!=="undefined"?global:this);
+    loadCSS("//fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700|Montserrat:400,700");
+    </script>
+<script>
+    jQuery(document).ready(function($) {
+        var donation_link = ' https://secure.donaldjtrump.com/donate-homepage/';
+        var $donate_amounts = $('.donate-amounts');
+        var $donate_amounts_a = $donate_amounts.find('a');
+        var $btn_next = $('.aBtn').find('.BtnNext');
+
+        $donate_amounts.on('click', 'a', function(e) {
+            e.preventDefault();
+            if ( $donate_amounts.hasClass('adobe-test') ) {
+                // get amount from this button
+                var don_amount = this.getAttribute( 'data-amount' );
+                if ( window.location.search ) {
+                    this.href = donation_link + window.location.search + '&amount=' + don_amount;
+                } else {
+                    this.href = donation_link + '?utm_campaign=djt_website_donate&utm_source=website&utm_medium=web&utm_content=top_nav&amount=' + don_amount;
+                }
+                window.location = this.href;
+            }
+
+            // remove active class from all a elements
+            $donate_amounts_a.removeClass( 'btn-active' );
+
+            // set this button active/highlighted
+            $(this).addClass('btn-active');
+
+            // get amount from this button
+            var don_amount = this.getAttribute( 'data-amount' );
+
+            // set title of button
+            $btn_next[0].title = 'Donate $' + don_amount;
+
+            if ( window.location.search ) {
+                $btn_next[0].href = donation_link + window.location.search + '&amount=' + don_amount;
+            } else {
+                $btn_next[0].href = donation_link + '?utm_campaign=djt_website_donate&utm_source=website&utm_medium=web&utm_content=top_nav&amount=' + don_amount;
+            }
+
+            document.location = $btn_next[0].href;
+
+            return false;
+        });
+
+        $('.djt-issue-title').on('click', function(){
+            $(this).parent().find('.djt-issue-title .desc-arrow').toggleClass('djt-open');
+            $(this).parent().find('.djt-issue-desc').toggleClass('djt-open');
+        });
+
+        $('.djt-hq-title').on('click', function(){
+            $(this).parent().find('.djt-hq-title .desc-arrow').toggleClass('djt-open');
+            $(this).parent().find('.djt-hq-desc').toggleClass('djt-open');
+        });
+
+        $('.mobile_menu_icon').on('click', function(){
+            $(this).toggleClass('active');
+            $('.djt-nav-container nav').slideToggle();
+        });
+
+    });
+</script>
+<style type="text/css">html,body,p,a,h1,h2,h3,h4,h5,h6{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}body{margin:0;font-family:'Montserrat',serif;}a{text-decoration:none;font-family:'Montserrat',serif;}img{max-width:100%;}.djt-clr{clear:both;}.djt-top-register{width:100%;background-color:#bc0000;color:#fff;font-size:18px;font-weight:bold;text-align:center;padding:14px 0;}.djt-top-register:hover{background-color:#c70101;}.djt-top-register img{max-height:18px;margin-left:5px;vertical-align:middle;}header{margin:0 0 36px;}header #top_container{background-color:#151f6d;height:25px;width:100%;overflow:hidden;}#top_container #top_navigation{width:1000px;margin:0 auto;}#top_navigation ul{float:right;list-style:none;margin:0 10px 0;}#top_navigation ul li{display:inline-block;}#top_navigation ul li a{color:#fff;font-family:'Montserrat',serif;display:inline-block;padding:5px 17px;font-size:13px;text-transform:uppercase;}header .djt-logo-container{width:100%;max-width:246px;margin:0 auto 0 0;z-index:1000;min-height:80px;}.djt-logo-container .djt-logo{max-width:100%;}header .djt-header-bkg{min-height:392px;background-image:url('https://www.donaldjtrump.com/assets/site/djt-florida-landing-banner.jpg');background-position:center;background-size:cover;background-repeat:no-repeat;}.djt-nav-container{background-color:#fff;}.djt-nav-container .djt-inner-container{width:100%;max-width:950px;margin:0 auto;position:relative;}.mobile_menu_icon{color:#bc0000;}.mobile_menu_icon span{color:#bc0000;}.djt-nav-container nav{position:absolute;top:0;right:0;z-index:999;}.djt-nav-container nav ul{list-style:none;margin:0;padding:0;}.djt-nav-container nav ul li.mobile_only{display:none;}.djt-nav-container nav ul li{list-style:none;float:left;display:inline-block;position:relative;border-left:1px solid #c9c9c9;color:#4e4d56;}.djt-nav-container nav ul li #nav_donate{background-color:#c8102e;color:#fff;}.djt-nav-container nav ul li #nav_donate:hover{background-color:#db0729;}.djt-nav-container nav ul li a{color:#464646;line-height:80px;display:inline-block;padding:0 20px;font-size:14px;text-transform:uppercase;letter-spacing:.1em;}.djt-nav-container nav ul li ul{display:none;position:absolute;left:0;top:81px;background-color:#fff;padding:20px;z-index:999;}.djt-nav-container nav ul li:hover ul{display:block;}.djt-nav-container nav ul li ul li{display:block;border-left:none;float:none;}.djt-nav-container nav ul li ul li a{padding:5px 0;line-height:20px;font-size:14px;}.djt-state-content{width:100%;max-width:950px;margin:0 auto;}.djt-state-intro{}.djt-state-intro .state-video{float:left;width:570px;height:350px;}.djt-state-intro #state-donate{float:right;padding:71px 47px 72px;background-color:#151f6d;max-width:266px;max-height:207px;}#state-donate .top-h{margin:0 0 34px 0;}.top-h h1{font-size:22px;color:#fff;font-weight:normal;margin:0;}.top-h h1 span{font-size:26px;font-weight:bold;}#state-donate .bottom-h{margin:0;}.bottom-h .donate-amounts{min-height:40px;margin:0 0 34px;}.donate-amounts a{color:#fff;font-size:18px;background-color:transparent;border:solid 1px #fff;border-radius:5px;}.donate-amounts a.btn-active{background-color:#fff;color:#151f6d;}.donate-amounts .donate-amt-1{padding:9px 16px 10px 15px;}.donate-amounts .donate-amt-2{padding:9px 15px 10px 14px;}.donate-amounts .donate-amt-3{padding:9px 14px 10px 13px;}.donate-amounts .donate-amt-4{padding:9px 9px 10px 9px;}.bottom-h .aBtn{height:40px;}.aBtn .BtnNext{padding:16px 89px;color:#fff;font-weight:bold;background-color:#c8102e;}.aBtn .BtnNext:hover{background-color:#db0729;}.bottom-h p{font-size:16px;color:#fff;max-width:95%;}.djt-divider-container{width:100%;margin:60px auto 38px;text-align:center;}.djt-divider-container img{max-width:100px;}.djt-divider-container .djt-divider-header{color:#151f6d;margin:25px 0 0;text-transform:uppercase;}.djt-blurb-container{color:#151f6d;}.djt-blurb-container h2{text-align:center;font-size:24px;text-transform:uppercase;}.djt-blurb-container .djt-blurb{width:31%;float:left;margin:0 3.5% 0 0;}.djt-blurb h3{font-size:18px;}.djt-blurb p{font-size:14px;line-height:22px;color:#464646;}.djt-blurb-container .djt-blurb-signup{width:calc(31% - 46px);float:left;background-color:#f3f2f2;padding:18px 23px 24px;}.djt-blurb-signup h3{font-size:18px;margin:0 0 15px;}.djt-blurb-signup p{font-size:16px;}.djt-blurb-signup .dform_container input{width:calc(100% - 19px);padding:16px 0 16px 15px;margin:0 0 15px 0;font-size:16px;border:none;}.djt-blurb-signup .dform_container input:focus{outline:none;}.djt-blurb-signup .submit{width:100%!important;height:49px;background-color:#c8102e;border:none;color:#fff;font-size:18px!important;font-weight:bold;padding:0!important;margin:0!important;}.djt-blurb-signup .submit:hover{background-color:#db0729;}.djt-blurb-container .djt-full-blurb-container{margin:41px 0 0;height:410px;}.djt-full-blurb-container .djt-full-blurb-left{width:58%;float:left;height:100%;background-image:url("https://www.donaldjtrump.com/assets/site/djt-landing-volunteer.jpg");background-repeat:no-repeat;background-size:cover;}.djt-full-blurb-container .djt-full-blurb-right{width:calc(42% - 50px);float:right;height:calc(100% - 100px);background-color:#151f6d;color:#fff;padding:50px 25px;line-height:24px;text-align:left;}.djt-full-blurb-right h2{text-align:left;}.djt-full-blurb-right p{font-size:14px;line-height:22px;margin-bottom:25px;}.djt-full-blurb-right .djt-volunteer-btn{background-color:#c8102e;color:#fff;font-size:18px;font-weight:bold;padding:14px 58px 15px 59px;}.djt-store-ad-container{width:100%;height:304px;background-image:url("https://www.donaldjtrump.com/assets/site/djt-landing-fl-store-bkgd-placeholder@2x.jpg");background-size:cover;background-repeat:no-repeat;background-position:right;margin:41px 0 38px;}.djt-store-ad-container h2{width:50%;margin:0 0 25px;padding:75px 0 0 50px;}.djt-store-ad-container a{margin:25px 0 0 50px;padding:15px 31px 16px;background-color:#c8102e;color:#fff;font-weight:bold;}.djt-store-ad-container a:hover{background-color:#db0729;}.djt-event-container{margin:0;}.djt-event-container .djt-single-event{width:31%;float:left;margin:0 3.5% 0 0;padding:0 0 22px;text-align:center;background-color:#f3f2f2;}.djt-event-container .djt-single-event.djt-event-last{margin:0;}.djt-single-event p{margin:0 0 15px;}.djt-single-event .djt-event-city{width:100%;background-color:#151f6d;color:#fff;margin-top:0;padding:17px 0 16px;}.djt-single-event .djt-event-date{width:calc(100% - 20px);margin:0 auto;color:#151f6d;border:solid 2px #151f6d;padding:12px 0;font-size:20px;}.djt-event-date span{font-weight:bold;}.djt-single-event .djt-event-time{color:#fff;background-color:#151f6d;width:100px;margin:0 auto 15px;padding:5px 0;}.djt-single-event .djt-event-speakers{margin:0;}.djt-event-speakers .djt-event-speaker-center{width:50%;margin:0 auto 30px;color:#151f6d;font-size:12px;}.djt-event-speakers .djt-event-speaker-left{width:50%;float:left;margin:0 0 15px;color:#151f6d;font-size:12px;}.djt-event-speakers .djt-event-speaker-right{width:50%;float:right;margin:0 0 15px;color:#151f6d;font-size:12px;}.djt-single-event .djt-event-btn{padding:15px 94px;background-color:#c8102e;color:#fff;font-weight:bold;}.djt-single-event .djt-event-btn:hover{background-color:#db0729;}.djt-single-event .djt-media-request{color:#c8102e;text-decoration:underline;}.djt-single-event .djt-media-request:hover{color:#db0729;}.djt-event-container .djt-single-vote{width:31%;float:left;margin:38px 3.5% 38px 0;text-align:center;}.djt-single-vote h3{color:#151f6d;text-align:center;border:solid 3px #f3f2f2;margin:0;padding:15px 0;}.djt-single-vote .djt-voting-desc{border:solid 3px #f3f2f2;border-top:none;text-align:center;padding:15px 10%;min-height:100px;line-height:1.5;}.djt-single-vote .djt-voting-desc p{margin:0;color:#464646;}.djt-single-vote .djt-voting-desc a{color:#c8102e;text-decoration:underline;}.djt-single-vote .djt-voting-desc a:hover{color:#db0729;}.djt-event-container .djt-double-vote{width:65.5%;float:left;margin:38px 0 38px 0;text-align:center;}.djt-double-vote h3{color:#151f6d;text-align:center;border:solid 3px #f3f2f2;margin:0;padding:15px 0;}.djt-double-vote .djt-voting-desc{border:solid 3px #f3f2f2;border-top:none;text-align:center;width:calc(30% - 6px);padding:15px 10%;float:left;min-height:100px;line-height:1.5;}.djt-double-vote .djt-voting-desc.djt-vote-right{border-left:none;width:calc(30% - 3px);}.djt-double-vote .djt-voting-desc p{margin:0;color:#464646;}.djt-double-vote .djt-voting-desc a{color:#c8102e;text-decoration:underline;}.djt-double-vote .djt-voting-desc a:hover{color:#db0729;}.djt-state-issue-container{max-width:600px;margin:0 auto 38px;}.djt-state-issue-container .djt-single-issue{}.djt-single-issue .djt-issue-title{border-bottom:solid 1px #d3d1d4;padding:0 15px 0 0;position:relative;}.djt-single-issue .djt-issue-title:hover{cursor:pointer;}.djt-issue-title h3{float:left;color:#151f6d;}.djt-issue-title .desc-arrow{position:absolute;right:0;top:55%;-webkit-transition:-webkit-transform 1s;transition:transform 1s;}.djt-issue-title .desc-arrow.djt-open{transform:rotate(180deg);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transition:-webkit-transform 1s;transition:transform 1s;}.djt-single-issue .djt-issue-desc{color:#464646;font-size:14px;line-height:22px;display:none;}.djt-single-issue .djt-issue-desc.djt-open{display:block;}.djt-state-hq-container{margin:0 0 38px;}.djt-state-hq-container .djt-single-hq{background-color:#f3f2f2;min-height:60px;}.djt-single-hq .djt-hq-title{margin:0 2.5%;border-bottom:solid 1px #d3d1d4;position:relative;}.djt-single-hq .djt-hq-title:hover{cursor:pointer;}.djt-hq-title h3{float:left;color:#151f6d;margin-bottom:0;padding-bottom:5px;}.djt-hq-title .desc-arrow{position:absolute;right:0;top:55%;-webkit-transition:-webkit-transform 1s;transition:transform 1s;}.djt-hq-title .desc-arrow.djt-open{transform:rotate(180deg);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transition:-webkit-transform 1s;transition:transform 1s;}.djt-single-hq .djt-hq-desc{color:#464646;font-size:14px;line-height:22px;padding:20px 0 20px;display:none;}.djt-single-hq .djt-hq-desc.djt-open{display:block;}.djt-hq-desc .hq-address{width:45%;padding:0 2.5%;float:left;margin:0 0 15px;}.hq-address h4{font-size:14px;font-weight:bold;margin:0 0 5px;}.hq-address p{font-size:14px;margin:0 0 5px;}footer{width:100%;text-align:center;color:#151f6d;background-color:#151f6d;display:inline-block;}footer .djt-social{border-bottom:4px solid #fff;width:100%;height:76px;background-color:#c8102e;}.djt-social .social_item{font-family:'Old Standard TT',serif;font-size:16px;display:inline-block;width:195px;height:76px;padding-left:25px;line-height:76px;color#fff;}.djt-social .social_item.twitter{background:url("https://assets.donaldjtrump.com/site/ftr_social_twitter.png") 65px center no-repeat;}.djt-social .social_item.facebook{background:url("https://assets.donaldjtrump.com/site/ftr_social_fb.png") 65px center no-repeat;}.djt-social .social_item.instagram{background:url("https://assets.donaldjtrump.com/site/ftr_social_instagram.png") 50px center no-repeat;}.djt-social .social_item.youtube{background:url("https://assets.donaldjtrump.com/site/ftr_social_youtube.png") 60px center no-repeat;}footer .djt-disclaimer{width:80%;max-width:375px;margin:16px auto;padding:15px 25px;border:solid 1px #fff;color:#fff;}footer a{color:#fff;}footer a:hover{text-decoration:underline;}@media (max-width:1024px) {#top_container #top_navigation{width:96%;}}@media (max-width:975px) {.djt-event-container .djt-single-vote{width:100%;max-width:300px;margin:40px auto;float:none;}.djt-single-vote .djt-voting-desc{min-height:0;}.djt-event-container .djt-double-vote{width:100%;max-width:600px;margin:40px auto;float:none;}.djt-double-vote .djt-voting-desc{min-height:180px;}}@media (max-width:929px) {.djt-state-intro #state-donate{float:none;margin:20px auto;padding:50px 10px;max-width:300px;}#state-donate .top-h,#state-donate .bottom-h{text-align:center;}.djt-state-intro .state-video{float:none;margin:20px auto;width:320px;height:auto;}}@media (max-width:900px) {.djt-single-event .djt-event-btn{padding:15px 30px;}}@media (max-width:880px) {header #top_container{display:none;}}@media (max-width:800px) {.djt-nav-container nav{display:none;width:100%;top:80px;background:#fff;z-index:999;}.djt-nav-container nav.djt-mobile-open{display:block;}.djt-nav-container nav ul li a.active{background:#c8102e;color:#fff;}.mobile_menu_icon{display:block;float:right;font-size:14px;font-weight:400;height:32px;margin:0;padding:0;position:absolute;right:4%;top:10px;width:32px;z-index:9;}.mobile_menu_icon span{position:absolute;top:50%;left:0;display:block;padding:0;width:32px;height:4px;background-color:#c8102e;font-size:0px;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition:background-color 0.3s;transition:background-color 0.3s;}.mobile_menu_icon span:before{position:absolute;left:0px;width:100%;height:100%;background:#c8102e;content:'';-webkit-transition:-webkit-transform 0.3s;transition:transform 0.3s;top:0;-webkit-transform:translateY(-250%);transform:translateY(-250%);}.mobile_menu_icon span:after{position:absolute;left:0px;width:100%;height:100%;background:#c8102e;content:'';-webkit-transition:-webkit-transform 0.3s;transition:transform 0.3s;top:0;-webkit-transform:translateY(250%);transform:translateY(250%);}.mobile_menu_icon.active span{-webkit-background:none;-moz-background:none;-ms-background:none;-o-background:none;background:none;background-color:#fff;}.mobile_menu_icon.active span:before{-webkit-transform:translateY(0) rotate(45deg);transform:translateY(0) rotate(45deg);}.mobile_menu_icon.active span:after{-webkit-transform:translateY(0) rotate(-45deg);transform:translateY(0) rotate(-45deg);top:0;}.djt-nav-container nav ul li.mobile_only{display:block;}.djt-nav-container nav ul li.nav_donate{display:none;}.djt-nav-container nav ul li{float:none;border-bottom:1px solid #c8102e;display:block;}.djt-nav-container nav ul li a{padding:0 15px;display:block;}}@media (min-width:768px) and  (max-width:1024px) {.djt-social .social_item{width:18%;padding-left:6%;}}@media (max-width:767px) {.djt-state-intro #state-donate{width:100%;max-width:300px;margin:20px auto;padding:40px 10px 50px;}.bottom-h .donate-amounts{text-align:center;}.djt-state-intro .state-video{width:100%;max-width:320px;margin:20px auto;}.djt-blurb-container h2{width:100%;max-width:300px;margin:20px auto;}.djt-blurb-container .djt-blurb{width:100%;max-width:300px;margin:0 auto 38px;float:none;text-align:center;}.djt-blurb-container .djt-blurb-signup{width:100%;max-width:254px;margin:20px auto;float:none;}.djt-blurb-container .djt-full-blurb-container{height:auto;}.djt-full-blurb-container .djt-full-blurb-left{width:100%;max-width:300px;margin:20px auto 0;float:none;height:225px;}.djt-full-blurb-container .djt-full-blurb-right{height:auto;width:100%;max-width:250px;margin:0 auto 20px;float:none;}.djt-store-ad-container{width:100%;max-width:300px;margin:20px auto;background-image:url("https://assets.donaldjtrump.com/_states/css/djt-statelanding-store-bkgd-mobile@2x.jpg");}.djt-store-ad-container h2{width:100%;margin:0 0 40px;padding:10px 0 0;text-align:center;}.djt-event-container .djt-single-event{width:100%;max-width:300px;margin:40px auto;float:none;}.djt-event-container .djt-single-event.djt-event-last{margin:40px auto;}.djt-state-issue-container{width:95%;margin:20px auto;padding:0 2.5%;}.djt-state-hq-container{width:95%;margin:20px auto;padding:0 2.5%;}footer .djt-social{height:auto;}.djt-social .social_item{width:24%;padding-left:0;height:55px;font-size:0px;line-height:0px;text-indent:-999em;background-position:center center!important;vertical-align:top;float:left;}}@media (max-width:600px) {.djt-hq-desc .hq-address{width:95%;padding:0 2.5%;float:none;}}@media (max-width:425px) {.djt-event-container .djt-double-vote{width:100%;max-width:300px;margin:40px auto;float:none;}.djt-double-vote .djt-voting-desc{width:auto;float:none;min-height:0;}.djt-double-vote .djt-voting-desc.djt-vote-right{width:auto;border-left:solid 3px #f3f2f2;}}@media (max-width:400px) {.djt-hq-title h3{margin-right:25px;}}@media screen and (max-width: 880px) {.djt-nav-container nav ul li ul{display:none;}}#popup_bkg{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:url("https://assets.donaldjtrump.com/site/background.png");z-index:999;}#popup_form_wrapper{display:none;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1000;}#popup_form{background:#fff;position:relative;padding:30px 20px;width:650px;margin:50px auto;border:1px solid #484848;-webkit-box-shadow:5px 5px 10px 0px rgba(0,0,0,0.5);-moz-box-shadow:5px 5px 10px 0px rgba(0,0,0,0.5);box-shadow:5px 5px 10px 0px rgba(0,0,0,0.5);}#popup_close{position:absolute;top:0;right:0;}#popup_top{text-align:center;}#popup_top h2{width:100%;margin:0;background:url("https://assets.donaldjtrump.com/site/gold_lines.png") left 15px no-repeat;font-weight:400;font-size:40px;color:#184092;font-family:'Montserrat',sans-serif;text-transform:uppercase;}#popup_top h2 span{display:block;width:100%;background:url("https://assets.donaldjtrump.com/site/gold_lines.png") right 15px no-repeat;}#popup_top h3{width:100%;font-weight:400;font-size:26px;color:#184092;font-family:'Montserrat',sans-serif;text-transform:uppercase;margin-bottom:10px;}#popup_form_items h3{padding:40px;border:1px solid #c1c1c1;margin:50px auto;text-align:center;width:80%;font-size:36px;color:#184092;line-height:50px;font-family:'Georgia',serif;font-weight:400;}#popup_form_items h4{text-align:center;width:100%;font-size:20px;margin-bottom:20px;color:#4c4c4c;font-family:'Montserrat',sans-serif;}#thank_you_social_buttons{text-align:center;width:100%;}#thank_you_social_buttons a{margin:0 3px;}#popup_form_items .column{float:left;}#popup_form_items .dform_label{font-size:13px;font-style:italic;color:#464646;line-height:22px;}#popup_form_items .dform_element{padding:5px 0;}#popup_form_items input[type="text"]{background:#ebebeb;border:1px solid #e1e1e1;padding:5%;width:80%;font-size:14px;}#popup_form_items input[type="email"]{background:#ebebeb;border:1px solid #e1e1e1;padding:5%;width:80%;font-size:14px;}#popup_form_items textarea{background:#ebebeb;border:1px solid #e1e1e1;padding:2%;width:91%;font-size:14px;}#popup_form_items select{}#popup_form_items input.submit{background:#9e0b0f;display:block;width:auto;padding:0;padding:10px 120px;margin:0 auto;color:#fff;text-transform:uppercase;font-size:20px;font-family:'Montserrat',sans-serif;-webkit-appearance:none;border-radius:0;}#popup_form_items input.submit:hover{cursor:pointer;background:#FFF;border:1px solid #b20107;color:#b20107;}#popup_form_items span.customSelect{width:100%;font-size:14px;background-color:#ebebeb;color:#464646;padding:5%;width:80%;border:1px solid #e1e1e1;}#popup_form_items span.customSelect.changed{}#popup_form_items .customSelectInner{background:url("https://assets.donaldjtrump.com/site/customSelect-arrow.gif") no-repeat center right;width:100%!important;}#popup_form_items span.error{display:block;font-size:12px;color:#FB2C05;line-height:26px;}#popup_form_items .dform_container ul{list-style:none;margin:0;font-size:13px;color:#464646;padding:0;}#popup_form_items .dform_container em{font-size:13px;}#popup_form_items .dform_container a{color:#b00909}</style>
+</head>
+<body>
+<header>
+
+<div id="top_container">
+<div id="top_navigation">
+<ul>
+<li><a href="https://www.youtube.com/watch?v=vtkGtXtDlQA">Schedule</a></li>
+<li><a href="../about/index.html">About</a></li>
+<li><a href="/public/imgs/gallery.gif">Gallery</a></li>
+</ul>
+<div class="djt-clr"></div>
+</div>
+</div>
+<div class="djt-nav-container">
+<div class="djt-inner-container">
+<div class="djt-logo-container">
+<a href="../index.html"><img class="djt-logo" src="/public/imgs/tp_newer_logo.png" srcset="https://assets.donaldjtrump.com/vphome/tp_newer_logo@2x.png 2x" alt="Trump Pence Logo"></a>
+</div>
+<a class="mobile_menu_icon" href="javascript:;"><span></span></a>
+<nav>
+<ul>
+<li class="mobile_only"><a href="../about.html">About</a></li>
+<li class="mobile_only"><a href="../schedule.html">Schedule</a></li>
+<li class="mobile_only"><a href="../issues.html">Issues</a></li>
+<li>
+<a href="../policies/index.html">Positions</a>
+<ul style="width: 340px;">
+<li><a href="../contract/index.html">Contract with the American Voter</a></li>
+<li><a href="../policies/child-care/index.html">Child Care</a></li><li><a href="../policies/constitution-and-second-amendment/index.html">Constitution and Second Amendment</a></li><li><a href="../policies/cyber-security/index.html">Cybersecurity</a></li><li><a href="../policies/economy/index.html">Economy</a></li><li><a href="../policies/education/index.html">Education</a></li><li><a href="../policies/energy/index.html">Energy</a></li><li><a href="../policies/foreign-policy-and-defeating-isis/index.html">Foreign Policy and Defeating ISIS</a></li><li><a href="../policies/health-care/index.html">Health Care</a></li><li><a href="../policies/immigration/index.html">Immigration</a></li><li><a href="../policies/an-americas-infrastructure-first-plan/index.html">INFRASTRUCTURE</a></li><li><a href="../policies/national-defense/index.html">National Defense</a></li><li><a href="../policies/regulations/index.html">Regulations</a></li><li><a href="../policies/tax-plan/index.html">Tax Plan</a></li><li><a href="../policies/trade/index.html">Trade</a></li><li><a href="../policies/veterans-affairs-reform/index.html">Veterans Affairs Reform</a></li>
+</ul>
+</li>
+<li>
+<a href="index.html" class="active">States</a>
+<ul style="width: 200px;">
+<li><a href="arizona.html" class="active">Arizona</a></li><li><a href="colorado.html">Colorado</a></li><li><a href="florida.html">Florida</a></li><li><a href="georgia.html">Georgia</a></li><li><a href="indiana.html">Indiana</a></li><li><a href="iowa.html">Iowa</a></li><li><a href="maine.html">Maine</a></li><li><a href="michigan.html">Michigan</a></li><li><a href="minnesota.html">Minnesota</a></li><li><a href="nevada.html">Nevada</a></li><li><a href="new-hampshire.html">New Hampshire</a></li><li><a href="north-carolina.html">North Carolina</a></li><li><a href="ohio.html">Ohio</a></li><li><a href="pennsylvania.html">Pennsylvania</a></li><li><a href="virginia.html">Virginia</a></li>
+</ul>
+</li>
+<li><a href="/public/about/">Get Involved</a></li>
+<li>
+<a href="../media.html">Media</a>
+<ul style="width: 200px;">
+<li><a href="../content-center/index.html">Content Center</a></li>
+<li><a href="../media/category/in-the-news.html">In The News</a></li><li><a href="../media/category/video.html">Video</a></li><li><a href="../media/category/speeches.html">Speeches</a></li>
+<li><a href="../press-releases/index.html">Press Releases</a></li>
+<li><a href="../press-releases/category/endorsements/index.html">Endorsements</a></li>
+</ul>
+</li>
+<li class="mobile_only"><a href="../press-releases.html">Press Releases</a></li>
+<li class="mobile_only"><a href="../media/category/video.html">Video</a></li>
+<li class="mobile_only"><a href="../gallery.html">Gallery</a></li>
+<li><a href="http://zazzle.com/donaldjaytrump*">Shop</a></li>
+<li><a href="http://zazzle.com/donaldjaytrump*" id="nav_donate">Contribute</a></li>
+</ul>
+</nav>
+<div class="djt-clr"></div>
+</div>
+</div>
+<div class="djt-header-bkg" style="background-image:url('/public/imgs/The_Gang_Goes_To_Hell.png')"></div>
+</header>
+<div class="djt-state-content">
+<div class="djt-state-intro">
+<div id="state-donate">
+<div class="top-h">
+<h1><span>Trump is for Himself</span><br>Show your support:</h1>
+</div>
+<div class="bottom-h">
+
+<div class="aBtn">
+<a class="BtnNext" title="Donate" href="https://secure3.convio.net/pcfou/site/Donation2?idb=1248012706&1400.donation=form1&df_id=1400&mfc_pref=T&idb=0">Contribute</a>
+</div>
+</div>
+</div>
+<div class="state-video">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/JUWSLlz0Fdo" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="djt-clr"></div>
+</div>
+
+<div class="djt-divider-container">
+<img class="djt-divider" src="https://assets.donaldjtrump.com/_states/css/djt-landing-stardivider.jpg" srcset="https://assets.donaldjtrump.com/_states/css/djt-landing-stardivider@2x.jpg">
+<h2 class="djt-divider-header"></h2>
+</div>
+
+<div class="djt-clr"></div>
+</div>
+</div>
+<div class="djt-store-ad-container" style="background-image:url('https://assets.donaldjtrump.com/_states/store-img/djt-state-landing-store-bkgd@2x.jpg')">
+<h2>Get geared up<br>and show your support!</h2>
+<a href="http://zazzle.com/donaldjaytrump*">Visit the store</a>
+</div>
+</div>
+<footer>
+<div class="djt-social"data-href="http://djt-cyber2024.c9users.io/public/" data-layout="button" data-size="large" data-mobile-iframe="true">
+<a href="https://twitter.com/DonaldJayTrump0" class="social_item twitter" target="_blank">twitter</a>
+<!--<a href="https://www.facebook.com/DonaldTrump" class="social_item facebook" target="_blank">facebook</a>-->
+<a class="social_item facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdjt-cyber2024.c9users.io%2Fpublic%2F&amp;src=sdkpreparse">facebook</a>
+<a class="social_item facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdjt-cyber2024.c9users.io%2Fpublic%2F&amp;src=sdkpreparse">facebook</a>
+<a class="social_item facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdjt-cyber2024.c9users.io%2Fpublic%2F&amp;src=sdkpreparse">facebook</a>
+</div>
+<p><span class="white_box">Paid for by No-one In Particular</span></p>
+<p style="margin-bottom: 5px;"><a href="../../contact/index.html">Contact The Campaign</a> - <a href="../../about/privacy-policy/index.html">Privacy Policy</a> - Tel: <a href="tel:18885672258">188-567-ACLU</a></p>
+<p style="margin: 0 0 5px 0;padding: 0 10%;width: 80%;">
+</p>
+</footer>
+ 
+<script type="text/javascript">_satellite.pageBottom();</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 962628614;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/962628614/?value=0&guid=ON&script=0"/>
+</div>
+</noscript>
+ 
+<script src="https://platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">
+twttr.conversion.trackPid('nus1w', { tw_sale_amount: 0, tw_order_quantity: 0 });
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nus1w&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0"/>
+<img height="1" width="1" style="display:none;" alt="" src="https://t.co/i/adsct?txn_id=nus1w&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0"/>
+</noscript>
+ 
+<div id="popup_bkg"></div>
+<div id="popup_form_wrapper">
+<div id="popup_form">
+<div id="popup_close">
+<a href="arizona.html#"><img src="https://assets.donaldjtrump.com/site/close.jpg" alt="Close"></a>
+</div>
+<div id="popup_top">
+<h2><span>Sign Up</span></h2>
+<h3>To Receive Updates From Donald Jay Trump</h3>
+</div>
+<div id="popup_form_items">
+<form id="new_submission" class=" sign_up" method="post" action="https://www.donaldjtrump.com/states/arizona" enctype="multipart/form-data">
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="20"/>
+<input type="hidden" name="ACTU" value="94"/>
+<input type="hidden" name="FDATA" value="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"/>
+<input type="hidden" name="site_id" value="1"/>
+<input type="hidden" name="csrf_token" value="5abd8de9014a9ea260c14d44824ff5de5e5e20c9"/>
+</div>
+<div class="dform"><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_1" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_text_input dftop_label field_first_name dform_required" id="forms_field_2" style=""><label class="dform_label" for="ddform_2">First Name <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[2]" value="" class="text required validate[required] " id="ddform_2" placeholder="" data-placeholder="" maxlength=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_last_name dform_required" id="forms_field_6" style=""><label class="dform_label" for="ddform_6">Last Name <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[6]" value="" class="text required validate[required] " id="ddform_6" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_10" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_email dftop_label field_email_address dform_required" id="forms_field_3" style=""><label class="dform_label" for="ddform_3">Email Address <span class="req">*</span></label><div class="dform_container"><input type="email" name="fields[3]" value="" class="text  required validate[required,custom[email]] " id="ddform_3" placeholder="" data-placeholder=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_mobile_number " id="forms_field_7" style=""><label class="dform_label" for="ddform_7">Mobile Number</label><div class="dform_container"><input type="text" name="fields[7]" value="" class="text " id="ddform_7" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_11" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_text_input dftop_label field_address " id="forms_field_4" style=""><label class="dform_label" for="ddform_4">Address</label><div class="dform_container"><input type="text" name="fields[4]" value="" class="text " id="ddform_4" placeholder="" data-placeholder="" maxlength=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_city " id="forms_field_8" style=""><label class="dform_label" for="ddform_8">City</label><div class="dform_container"><input type="text" name="fields[8]" value="" class="text " id="ddform_8" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_12" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_select dftop_label field_state dform_required" id="forms_field_5" style=""><label class="dform_label" for="ddform_5">State <span class="req">*</span></label><div class="dform_container"><select name="fields[5]" class=" required validate[required] " id="ddform_5">
+<option value="">Please Choose</option>
+<option value="Other">Other</option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AS">American Samoa</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="GU">Guam</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="MP">Northern Marianas</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="PR">Puerto Rico</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="VI">U.S. Virgin Islands</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+</select></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_zip_code dform_required" id="forms_field_9" style=""><label class="dform_label" for="ddform_9">Zip Code <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[9]" value="" class="text required validate[required] " id="ddform_9" placeholder="" data-placeholder="" maxlength="5"/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_27" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_checkbox dftop_label field_volunteer " id="forms_field_26" style=""><div class="dform_container"><ul class="checkboxes"><li><label for="fields[26]-0"><input type="checkbox" name="fields[26][]" value="Volunteer" class="" id="fields[26]-0"/>&nbsp; I Would Like to Volunteer</label></li></ul></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"></div><br clear="all"></div></div></div><div class="dform_element dform_mailinglist dftop_label field_mailinglist " id="forms_field_24" style=""><div class="dform_container"><ul class="checkboxes"><li><label><input type="checkbox" name="fields[24]" value="yes" checked="checked"/>&nbsp;Yes, please subscribe me to the Donald Jay Trump for President email list</label></li></ul></div></div><div class="dform_element dform_checkbox dftop_label field_text_messages " id="forms_field_240" style=""><div class="dform_container"><ul class="checkboxes"><li><label for="fields[240]-0"><input type="checkbox" name="fields[240][]" value="Yes" checked="checked" class="" id="fields[240]-0"/>&nbsp; Yes, please send me periodic text messages from Donald Jay Trump for President</label></li></ul></div></div><div class="dform_element dform_html field_untitled " id="forms_field_241" style=""><div class="dform_container"><em>By subscribing with your mobile number you are agreeing to receive periodic text messages from Donald Jay Trump for President, Inc. Message data rates may apply. Text "STOP" to opt-out. T&C/Privacy Policy: <a href="http://www.sms-terms.com/88022/" target="_blank">sms-terms.com/88022</a></em></div></div><div class="dform_element dform_textarea dftop_label field_comments " id="forms_field_23" style=""><label class="dform_label" for="ddform_23">Comments</label><div class="dform_container"><textarea name="fields[23]" cols="50" rows="4" class="" id="ddform_23" placeholder="" data-placeholder=""></textarea></div></div><div class="hiddenFields">
+<input type="hidden" name="fields[63]" value=""/>
+</div><div class="dform_element dform_captcha dftop_label field_captcha " id="forms_field_205" style=""><label class="dform_label" for="ddform_205">CAPTCHA</label><div class="dform_container"><div class="g-recaptcha" data-sitekey="6LfFRBsTAAAAAID_gT8DfxJs_9bZkSdvI3fl8ilA" data-theme="light" data-size="normal"></div><script type="text/javascript" src="https://www.google.com/recaptcha/api.js?"></script></div></div><div class="dform_element submit_button"> <div class="dform_container"><div class="dfinput_full"><input type="submit" class="submit" name="submit_button" value="Submit" data-value="Submit" data-wait="Verifying..."/></div></div></div></div></form>
+</div>
+</div>
+</div>
+<script async src="../js/jquery.customSelect.min.js"></script>
+<script>
+        if (window.top !== window.self) window.top.location.replace(window.self.location.href);
+        $(function(){
+            // Mobile Menu
+            $('.mobile_menu_icon').on('click',function(){
+                $(this).toggleClass('active');
+                $('nav').slideToggle();
+                return false;
+            });
+            // Popup Close
+            $('#popup_close a').on('click',function(){
+                $('#popup_bkg').hide();
+                $('#popup_form_wrapper').hide();
+                return false;
+            });
+            // Popup Form
+            $('a.pop_form').on('click',function(){
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                $('#popup_bkg').show();
+                $('#popup_form_wrapper').fadeIn(500,function(){
+                    if(!$('#popup_form_wrapper').hasClass('active')){
+                        $('select').customSelect();
+                        $('#popup_form_wrapper').addClass('active');
+                    }
+                });
+                return false;
+            });
+
+            // Form Submission Control
+            $('#new_submission').on('submit', function(evt){
+                $('#new_submission').find('span.error').remove();
+                $('#popup_form_items input.submit').val('Sending... Wait');
+                evt.preventDefault();
+                var params = $('#new_submission').find(':input').serializeArray();
+                $.ajax({
+                    dataType:'json',
+                    data: params,
+                    type: 'POST',
+                    success: function(data){
+                        if (data.success == 'yes'){
+                            $('#popup_top').hide();
+                            $('#popup_form_items').html('<h3>Thank You For Signing Up!</h3><h4>Join Us On Social Media</h4><div id="thank_you_social_buttons"><a href="https://twitter.com/realdonaldtrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/twitter.png" alt="Trump Twitter"></a><a href="https://www.facebook.com/DonaldTrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/facebook.png" alt="Trump Facebook"></a><a href="https://instagram.com/realdonaldtrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/instagram.png" alt="Trump Instagram"></a><a href="https://www.youtube.com/user/trump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/youtube.png" alt="Trump Youtube"></a></div>');
+                        } else{
+                            for (var item in data.errors){
+                                if(data.errors[item].field_id == '205'){
+                                    console.log('captcha');
+                                    $('#forms_field_205').find('label').after("<span class='error'>You must check the captcha</span>");
+                                }else{
+                                    var itemID = '#ddform_'+data.errors[item].field_id;
+                                    var type = $(itemID).attr('type');
+                                    var fieldLabel = $(itemID).closest('.dform_element').find('label').text().replace('*','');
+                                    var errMsg = fieldLabel+' is required';
+                                    if(type == 'email'){
+                                        errMsg = 'You must enter a valid email';
+                                    }
+                                    $(itemID).parent('.dform_container').append("<span class='error'>"+errMsg+"</span>");
+                                }
+                            }
+                            $('#popup_form_items input.submit').val('Submit');
+                        }
+                    }
+                });
+                return false;
+            });
+
+            // Form Error Remover
+            $('#new_submission input').on('focus',function(){$(this).next('span.error').remove();});
+
+            // Form Error Remover(2)
+            $('#new_submission select').on('change',function(){$(this).parent('div').find('span.error').remove();});
+        });
+    </script>
+</body>
+</html>
