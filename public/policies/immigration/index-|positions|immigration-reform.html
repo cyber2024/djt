@@ -1,0 +1,439 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Immigration | Donald J Trump for President</title>
+<meta name='keywords' content=''/>
+<meta name='description' content='Donald Jay Trump is the very definition of the American success story, continually setting the standards of excellence in business, real estate and entertainment. Show support for his presidential campaign here.'/>
+<link rel='canonical' href='../immigration.html'/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="../../favicon-v=1.2.ico">
+<link rel="stylesheet" href="https://assets.donaldjtrump.com/screen04172016.css?10082016" type="text/css"/>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7COld+Standard+TT:400,700,400italic' rel='stylesheet' type='text/css'>
+ 
+<script src="https://assets.adobedtm.com/ccb66fd3556ba80512894ddaac0f1024ce58d90d/satelliteLib-dd574bd6e7e9efe3999269eb66caa610091049a9.js"></script>
+<!--[if IE]>
+<script src="../../js/html5shiv.js"></script>
+<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script async src="../../js/jquery.customSelect.min.js"></script>
+<script async src="https://vjs.zencdn.net/ie8/1.1.0/videojs-ie8.min.js"></script>
+<script async src="https://vjs.zencdn.net/5.0.2/video.min.js"></script>
+<script>
+	if (window.top !== window.self) window.top.location.replace(window.self.location.href);
+	$(function(){
+	    // Mobile Menu
+	    $('.mobile_menu_icon').on('click',function(){
+	        $(this).toggleClass('active');
+	        $('nav').slideToggle();
+	        return false;
+	    });
+	    // Popup Close
+		$('#popup_close a').on('click',function(){
+			$('#popup_bkg').hide();
+			$('#popup_form_wrapper').hide();
+			return false;
+		});
+		// Popup Form
+		$('a.pop_form').on('click',function(){
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+			$('#popup_bkg').show();
+			$('#popup_form_wrapper').fadeIn(500,function(){
+				if(!$('#popup_form_wrapper').hasClass('active')){
+					$('select').customSelect();
+					$('#popup_form_wrapper').addClass('active');
+				}
+			});
+			return false;
+		});
+
+	    // Form Submission Control
+	    $('#new_submission').on('submit', function(evt){
+	        $('#new_submission').find('span.error').remove();
+	        $('#popup_form_items input.submit').val('Sending... Wait');
+	        evt.preventDefault();
+	        var params = $('#new_submission').find(':input').serializeArray();
+	        $.ajax({
+	            dataType:'json',
+	            data: params,
+	            type: 'POST',
+	            success: function(data){
+	                if (data.success == 'yes'){
+	                	$('#popup_top').hide();
+	                	$('#popup_form_items').html('<h3>Thank You For Signing Up!</h3><h4>Join Us On Social Media</h4><div id="thank_you_social_buttons"><a href="https://twitter.com/realdonaldtrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/twitter.png" alt="Trump Twitter"></a><a href="https://www.facebook.com/DonaldTrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/facebook.png" alt="Trump Facebook"></a><a href="https://instagram.com/realdonaldtrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/instagram.png" alt="Trump Instagram"></a><a href="https://www.youtube.com/user/trump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/youtube.png" alt="Trump Youtube"></a></div>');
+	                } else{
+	                    for (var item in data.errors){
+	                    	if(data.errors[item].field_id == '205'){
+	                    		console.log('captcha');
+	                        	$('#forms_field_205').find('label').after("<span class='error'>You must check the captcha</span>");
+	                    	}else{
+	                        	var itemID = '#ddform_'+data.errors[item].field_id;
+		                        var type = $(itemID).attr('type');
+		                        var fieldLabel = $(itemID).closest('.dform_element').find('label').text().replace('*','');
+		                        var errMsg = fieldLabel+' is required';
+		                        if(type == 'email'){
+		                            errMsg = 'You must enter a valid email';
+		                        }
+		                        $(itemID).parent('.dform_container').append("<span class='error'>"+errMsg+"</span>");
+	                    	}
+	                    }
+	        			$('#popup_form_items input.submit').val('Submit');
+	                }
+	            }
+	        });
+	        return false;
+	    });
+
+	    // Form Error Remover
+		$('#new_submission input').on('focus',function(){$(this).next('span.error').remove();});
+
+	    // Form Error Remover(2)
+		$('#new_submission select').on('change',function(){$(this).parent('div').find('span.error').remove();});
+	});
+</script>
+<meta property="og:title" content="Immigration">
+<meta property="og:image" content="">
+<link rel="stylesheet" type="text/css" href="../../js/slickslider/slick.css"/>
+<link rel="stylesheet" type="text/css" href="../../js/slickslider/slick-theme.css"/>
+<script type="text/javascript" src="../../js/slickslider/slick.min.js"></script>
+<style type="text/css">.press_item{}.press_item .djt-policy-date{font-family:'Old Standard TT',serif;text-align:center;font-size:14px;color:#464646;}.press_item .djt-policy-title{font-size:26px;color:#464646;text-align:center;font-family:'Old Standard TT',serif;}.djt-policy-section{margin:0 0 40px;}.djt-policy-section h3{font-size:14px;color:#464646;margin:25px 0 15px 0;}.djt-policy-section ul{margin:5px 5px 5px 15px;list-style:none;}.djt-policy-section ul li{margin:0 0 25px;font-size:14px;color:#464646;}.djt-policy-section ul li:before{content:"o ";color:#c8102e;font-size:5px;vertical-align:middle;background:#c8102e;border-radius:25px;padding:0 1px;margin:0 5px 0 0;}.djt-policy-section ul ul{margin:5px 5px 5px 25px;}.djt-policy-section ul ul li{margin:0 0 5px;}.press .main .container_right .nav_section h5{margin-bottom:15px;}.nav_section .nav_content-title{text-align:center;font-size:14px;background-color:#2b3260;margin:0 0 15px;}.nav_content-title p{color:#fff;font-weight:bold;line-height:16px;padding:10px 0;}.nav_content-title p span{font-size:12px;font-weight:normal;}.nav_section.djt-video-section{text-align:center;}.nav_section .djt-nav-vid{max-width:100%;}.nav_section.djt-policy-gallery{max-width:340px;margin:0 auto;}.nav_section.djt-nav-remarks p{line-height:normal;}.slider-big-img{max-width:290px;margin:0 auto;}.slider-img-nav .slide-img-container{width:75px;margin:5px 15px 15px;}.slider-img-nav img,.slider-big-img img{max-width:100%;}.slider-img-nav .slick-prev{bottom:-25px;top:inherit;width:75px;left:20%;}.slider-img-nav .slick-prev:before{content:'< Prev';color:#b20107;font-family:'Montserrat',sans-serif;font-size:14px;}.slider-img-nav .slick-next{bottom:-25px;top:inherit;width:75px;right:20%;}.slider-img-nav .slick-next:before{content:'Next >';color:#b20107;font-family:'Montserrat',sans-serif;font-size:14px;}.djt-popup-slider-container{position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;background-color:#000;display:none;}.djt-popup-slider-container .djt-popup-close{position:fixed;top:15px;right:15px;color:#fff;font-size:20px;}.djt-popup-slider-container .djt-popup-close:hover{cursor:pointer;}.djt-popup-slider{width:100%;max-width:40%;margin:100px auto 0;min-width:265px;}.djt-popup-slider img{max-width:100%;margin:0 auto;}.djt-popup-slider .slick-prev:before{color:#b20107;}.djt-popup-slider .slick-next:before{color:#b20107;}@media (min-width:768px) and (max-width:960px) {.slider-img-nav .slick-prev{left:0;}.slider-img-nav .slick-next{right:0;}}.djt-link-cont{text-align:center;}.djt-link-cont .djt-nav-section-link{text-decoration:underline;font-size:14px;}</style>
+<script type="text/javascript">
+		$(function(){
+			$('.djt-big-slider').on('click', function() {$('.djt-popup-slider-container').css('display','block');});
+			$('.djt-popup-close').on('click', function() {$('.djt-popup-slider-container').css('display','none');});
+		});
+		</script>
+</head>
+<body class="internal press">
+<div id="wrapper">
+ 
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M27JCG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M27JCG');</script>
+ 
+<noscript>
+<div style="padding: 2%; width: 75%; margin: 0 auto; text-align: center; font-size: 18px; line-height: 30px;">Your browser is NOT configured correctly to visit the Donald Jay Trump website. For full functionality and to utilize most of the website's capabilities you must have JavaScript enabled. Here are the <a href="http://www.enable-javascript.com" target="_blank"> instructions how to enable JavaScript in your web browser</a>.</div>
+</noscript>
+<style type="text/css">#top_container{background-color:#2b325f;height:25px;}header{background-color:#fff;}#wrapper{margin:0 auto -237px}#wrapper header{height:80px;border-top:none;border-bottom:none;}#wrapper header nav{background-color:#fff;}#wrapper header nav ul li.nav_donate{border-left:1px solid #c9c9c9;}#wrapper header nav ul li #nav_donate{background-color:#bc0000;color:#fff;}#wrapper header nav ul li a{color:#464646;}header nav ul li{border-left:1px solid #c9c9c9;}header nav ul li a{line-height:80px}header nav ul li ul{top:81px;background-image:none;}header .brand{top:4px;}header .brand:after{background:transparent;content:none;}#top_navigation ul li a{color:#fff;font-family:'Montserrat',serif!important;}.mobile_menu_icon{color:#bc0000!important;}.mobile_menu_icon span{background-color:#bc0000!important;}.mobile_menu_icon.active span{background-color:#fff!important;}.mobile_menu_icon span:before,.mobile_menu_icon span:after{background-color:#bc0000!important;}</style>
+ 
+<div id="top_container">
+<div id="top_navigation">
+<ul>
+<li><a href="../../schedule/index.html">Schedule</a></li>
+<li><a href="../../about/index.html">About</a></li>
+<li><a href="../../gallery/index.html">Gallery</a></li>
+</ul>
+</div>
+</div>
+<header>
+<div class="container">
+<div class="brand">
+<a href="../../index.html" title="Make America Great Again! | Donald J Trump for President">
+<img src="https://assets.donaldjtrump.com/vphome/tp_newer_logo.png" srcset="https://assets.donaldjtrump.com/vphome/tp_newer_logo@2x.png 2x" alt="Trump Pence Logo">
+</a>
+</div>
+<a class="mobile_menu_icon" href="javascript:;"><span></span></a>
+<nav>
+<ul>
+<li class="mobile_only"><a href="../../about.html">About</a></li>
+<li class="mobile_only"><a href="../../schedule.html">Schedule</a></li>
+<li class="mobile_only"><a href="../../issues.html">Issues</a></li>
+<li>
+<a href="../index.html" class="active">Positions</a>
+<ul style="width: 340px;">
+<li><a href="../../contract/index.html">Contract with the American Voter</a></li>
+<li><a href="../child-care/index.html">Child Care</a></li><li><a href="../constitution-and-second-amendment/index.html">Constitution and Second Amendment</a></li><li><a href="../cyber-security/index.html">Cybersecurity</a></li><li><a href="../economy/index.html">Economy</a></li><li><a href="../education/index.html">Education</a></li><li><a href="../energy/index.html">Energy</a></li><li><a href="../foreign-policy-and-defeating-isis/index.html">Foreign Policy and Defeating ISIS</a></li><li><a href="../health-care/index.html">Health Care</a></li><li><a href="index.html" class="active">Immigration</a></li><li><a href="../an-americas-infrastructure-first-plan/index.html">INFRASTRUCTURE</a></li><li><a href="../national-defense/index.html">National Defense</a></li><li><a href="../regulations/index.html">Regulations</a></li><li><a href="../tax-plan/index.html">Tax Plan</a></li><li><a href="../trade/index.html">Trade</a></li><li><a href="../veterans-affairs-reform/index.html">Veterans Affairs Reform</a></li>
+</ul>
+</li>
+<li>
+<a href="../../states/index.html">States</a>
+<ul style="width: 200px;">
+<li><a href="../../states/arizona.html">Arizona</a></li><li><a href="../../states/colorado.html">Colorado</a></li><li><a href="../../states/florida.html">Florida</a></li><li><a href="../../states/georgia.html">Georgia</a></li><li><a href="../../states/indiana.html">Indiana</a></li><li><a href="../../states/iowa.html">Iowa</a></li><li><a href="../../states/maine.html">Maine</a></li><li><a href="../../states/michigan.html">Michigan</a></li><li><a href="../../states/minnesota.html">Minnesota</a></li><li><a href="../../states/nevada.html">Nevada</a></li><li><a href="../../states/new-hampshire.html">New Hampshire</a></li><li><a href="../../states/north-carolina.html">North Carolina</a></li><li><a href="../../states/ohio.html">Ohio</a></li><li><a href="../../states/pennsylvania.html">Pennsylvania</a></li><li><a href="../../states/virginia.html">Virginia</a></li>
+</ul>
+</li>
+<li><a href="index-|positions|immigration-reform.html#" class="pop_form">Get Involved</a></li>
+<li>
+<a href="../../media.html">Media</a>
+<ul style="width: 200px;">
+<li><a href="../../content-center/index.html">Content Center</a></li>
+<li><a href="../../media/category/in-the-news.html">In The News</a></li><li><a href="../../media/category/video.html">Video</a></li><li><a href="../../media/category/speeches.html">Speeches</a></li>
+<li><a href="../../press-releases/index.html">Press Releases</a></li>
+<li><a href="../../press-releases/category/endorsements/index.html">Endorsements</a></li>
+</ul>
+</li>
+<li class="mobile_only"><a href="../../press-releases.html">Press Releases</a></li>
+<li class="mobile_only"><a href="../../media/category/video.html">Video</a></li>
+<li class="mobile_only"><a href="../../gallery.html">Gallery</a></li>
+<li><a href="http://shop.donaldjtrump.com">Shop</a></li>
+<li><a href="https://secure.donaldjtrump.com/we-made-history?amount=150&utm_campaign=djt_website_donate&utm_source=website&utm_medium=web&utm_content=top_nav" id="nav_donate">Contribute</a></li>
+</ul>
+</nav>
+<br class="clear">
+</div>
+</header>
+<section class="banner">
+<div class="banner_message">
+<h1>Immigration</h1>
+</div>
+<div class="banner_image">
+<img src="https://assets.donaldjtrump.com/site/about_banner2.jpg" alt="Internal Banner Image">
+</div>
+</section>
+<section class="main">
+<div class="container">
+<div class="container_left">
+<div class="press_item">
+<h2 class="djt-policy-title"></h2>
+<div class="djt-policy-section">
+<h3>Donald Jay Trump’S VISION</h3>
+<ul>
+<li>Prioritize the jobs, wages and security of the American people.</li></ul><ul><li>Establish new immigration controls to boost wages and to ensure that open jobs are offered to American workers first.</li></ul><ul><li>Protect&nbsp;the economic well-being of the lawful immigrants already living here by curbing uncontrolled foreign worker admissions<ul><li>Select&nbsp;immigrants based on their likelihood of success in the U.S. and their ability to be financially self-sufficient.</li><li>Vet&nbsp;applicants to ensure they support America’s values, institutions and people, and temporarily suspend immigration from regions that export terrorism and where safe vetting cannot presently be ensured.</li><li>Enforce&nbsp;the immigration laws of the United States and restore the Constitutional rule of law upon which America’s prosperity and security depend.</li></ul></li></ul><p><strong><u>Donald Jay Trump’s 10 Point Plan to Put America First</u></strong></p><p><strong><u></u></strong>1.&nbsp;Begin working on an impenetrable physical wall on the southern border, on day one.&nbsp;<a href="https://assets.donaldjtrump.com/Pay_for_the_Wall.pdf">Mexico will pay for the wall.</a></p><p>2.&nbsp;End catch-and-release. Under a Trump administration, anyone who illegally crosses the border will be detained until they are removed out of our country.</p><p>3.&nbsp;Move criminal aliens out day one, in joint operations with local, state, and federal law enforcement. We will terminate the Obama administration’s deadly, non-enforcement policies that allow thousands of criminal aliens to freely roam our streets.</p><p>4.&nbsp;End sanctuary cities.</p><p>5.&nbsp;Immediately terminate President Obama’s two illegal executive amnesties. All immigration laws will be enforced - we will triple the number of ICE agents. Anyone who enters the U.S. illegally is subject to deportation. That is what it means to have laws and to have a country.</p><p>6.&nbsp;Suspend the issuance of visas to any place where adequate screening cannot occur, until proven and effective vetting mechanisms can be put into place.</p><p>7.&nbsp;Ensure that other countries take their people back when we order them deported.</p><p>8.&nbsp;Ensure that a biometric entry-exit visa tracking system is fully implemented at all land, air, and sea ports.</p><p>9.&nbsp;Turn off the jobs and benefits magnet. Many immigrants come to the U.S. illegally in search of jobs, even though federal law prohibits the employment of illegal immigrants.</p><p>10.&nbsp;Reform legal immigration to serve the best interests of America and its workers, keeping immigration levels within historic norms.</p><p><em>Read More on Donald Jay Trump’s 10 Point Plan to Put America First, <a href="../../press-releases/donald-j.-trump-address-on-immigration.html">here</a>.</em></p><p><em>Read Mr. Trump's Remarks in&nbsp;<a href="../../press-releases/donald-j.-trump-address-on-immigration.html">Phoenix, Arizona</a>, in&nbsp;<a href="../../press-releases/donald-j.-trump-remarks-in-mexico-city-mexico.html">Mexico City</a>,&nbsp;and at the&nbsp;<a href="../../press-releases/donald-j.-trump-remarks-for-remembrance-project.html">Remembrance&nbsp;Project Luncheon</a>.</em></p>
+</div>
+<div class="djt-policy-section">
+<h3>KEY ISSUES</h3>
+<ul><li>Illegal immigrants and other non-citizens in our prisons and jails together had around 25,000 homicide arrests to their names. [<a href="http://www.gao.gov/assets/320/316959.pdf">United States Government Accountability Office</a>, March 2011]</li></ul><ul><li>Current immigration policy costs taxpayers $300 billion a year [<a href="https://urldefense.proofpoint.com/v2/url?u=http-3A__www.nationalreview.com_article_440334_immigration-2Dnational-2Dacademies-2Dsciences-2Dreport-2Dfiscal-2Deconomic-2Dimpact-2Dnative-2Dborn&d=DQMFaQ&c=ecx_Oy7LFev-5AZZypfA9UpMsuBfoOoTkgGzbwCI-s8&r=dqtv9bV-napDY4op8LBh_XswO6b9m1Zk0eWUxA-IX4k&m=boSYBa5swzc0iQoIcMHz0giH5EA3F2wlxpNIHikQ-2E&s=QZxwUvvzENouXrPsmYiWXJvq8mZtM0rHtxY2jdN7ZeY&e=">National Review</a>, Sept. 22, 2016]</li></ul><ul><li>There are at least 2 million convicted&nbsp;criminal aliens now inside the country. [<a href="http://cis.org/sites/cis.org/files/Deportation-Numbers-Unwrapped.pdf">Center for Immigration Studies</a>, Oct. 2013]</li></ul><ul><li>Since 2013 alone, the Obama Administration has allowed 300,000 criminal aliens to return back into U.S. communities.</li></ul><ul><li>Between 9/11 and the end of 2014, at least 380 foreign-born individuals were convicted in terror cases inside the United States. [<a href="http://www.sessions.senate.gov/public/index.cfm/2016/6/at-least-580-individuals-convicted-in-terror-cases-since-9-11-at-least-380-are-foreign-born">U.S. Senate Immigration Subcommittee</a>, June 22, 2016]</li></ul><ul><li>In the last five years, we’ve admitted nearly 100,000 immigrants from Iraq and Afghanistan – in these two countries, according to Pew research, a majority of residents say that the barbaric practice of honor killings against women are often or sometimes justified. [<a href="https://www.dhs.gov/sites/default/files/publications/ois_yb_2014.pdf">U.S. Department of Homeland Security</a>, August 2016], [<a href="http://www.pewresearch.org/fact-tank/2016/07/22/muslims-and-islam-key-findings-in-the-u-s-and-around-the-world/">Pew Research Center</a>, July 22, 2016]</li></ul><ul><li>From the year 2008 through 2014, nearly 13,000 criminal aliens were released back into U.S. communities because their home countries would not take them back. [<a href="https://www.bostonglobe.com/metro/2016/06/04/criminal-immigrants-reoffend-higher-rates-than-ice-has-suggested/l0OpCWfTdCuTNLIAfxApAO/story.html">The Boston Globe</a>, June 4, 2016]</li></ul><ul><li>62 percent of households headed by illegal immigrants used some form of cash or non-cash welfare programs, like food stamps or housing assistance. [<a href="http://cis.org/sites/cis.org/files/camarota-welfare-illegals_1.pdf">Center for Immigration Studies</a>, Sept. 2015]</li></ul><ul><li>Nearly 1 million illegal immigrants, including nearly 200,000 with&nbsp;criminal convictions, had been ordered deported but remain at large.&nbsp;[<a href="http://www.washingtonexaminer.com/900000-illegal-immigrants-ordered-removed-but-but-roam-freely-in-the-u.s./article/2567395">Washington Examiner</a>, July 1, 2015]</li></ul><ul><li>Between 2013 and 2015, the Obama Administration released over 86,000 criminal aliens from custody. In 2015 alone, ICE freed 19,723 criminal aliens, who had 64,197 convictions among them. These included 8,234 violent convictions and 208 homicide convictions. [<a href="https://homeland.house.gov/press/nations-top-security-officials-concerns-on-refugee-vetting/">Homeland Security Committee</a>, Nov. 19, 2015]</li></ul>
+</div>
+<div class="djt-policy-section">
+<h3>CONTRAST WITH HILLARY CLINTON</h3>
+<ul><li>Hillary will bring in 620,000 new refugees in a four-year term at a lifetime cost of over $400 billion. [<a href="http://www.sessions.senate.gov/public/index.cfm/2016/6/clinton-refugee-plan-could-bring-in-620-000-refugees-in-first-term-at-lifetime-cost-of-over-400-billion">U.S. Senate Immigration Subcommittee</a>, June 27, 2016]</li></ul><ul><li>Hillary Clinton has pledged amnesty in her first 100 days, and her plan will provide Obamacare, Social Security and Medicare for illegal immigrants – breaking the federal budget. On top of that, she promises uncontrolled low-skilled immigration that continues to reduce jobs and wages for American workers, especially African-American and Hispanic workers.</li></ul><ul><li>Hillary Clinton will give citizenship to illegal immigrants who compete directly against vulnerable American workers for the right to high-paying jobs, safe housing and good schools. [<a href="../../press-releases/hillarys-with-usif-youre-in-favor-of-open-borders.html">Donald Jay Trump Press Release</a>, July 28, 2016]</li></ul><ul><li>Hillary Clinton will protect and expand&nbsp;President Obama’s illegal and unconstitutional DACA and DAPA executive actions that give millions of illegal immigrants social security numbers, work authorization, travel authorization, eligibility for benefits, and&nbsp;tax credits in violation of the United States law.</li></ul><ul><li>Hillary Clinton supports making illegal immigrants eligible for Obamacare, which will force American taxpayers to further subsidize illegal immigration.</li></ul><ul><li>Hillary Clinton supports sanctuary cities, the catch-and-release program at the border, visa overstays, and the release of dangerous criminals from detention.</li></ul><ul><li>Hillary Clinton has no plan to secure the border. The ICE agents call her plan "the most radical immigration proposal in U.S. history."</li></ul>
+</div>
+</div>
+</div>
+<div class="container_right">
+<div class="nav_section djt-policy-gallery">
+<h5>Gallery</h5>
+<div class="nav_content-title">
+<p></p>
+</div>
+<div class="slider-big-img">
+<div class="slide-img-container">
+<img class="djt-big-slider" src="https://assets.donaldjtrump.com/_policies/sliders/3404/djt-policy-infographic-syrianrefugees__medium.jpg">
+</div>
+<div class="slide-img-container">
+<img class="djt-big-slider" src="https://assets.donaldjtrump.com/_policies/sliders/3404/djt-policy-infographic-immigrants-2__medium.jpg">
+</div>
+</div>
+<div class="slider-img-nav">
+<div class="slide-img-container">
+<img src="https://assets.donaldjtrump.com/_policies/sliders/3404/djt-policy-infographic-syrianrefugees__small.jpg">
+</div>
+<div class="slide-img-container">
+<img src="https://assets.donaldjtrump.com/_policies/sliders/3404/djt-policy-infographic-immigrants-2__small.jpg">
+</div>
+</div>
+</div>
+<div class="djt-popup-slider-container">
+<div class="djt-popup-close"><span>X</span></div>
+<div class="djt-popup-slider">
+<div class="slide-img-container">
+<img src="">
+</div>
+</div>
+</div>
+<div class="nav_section djt-video-section">
+<h5>Video</h5>
+<div class="nav_content-title">
+<p>
+Donald Jay Trump Remarks On Immigration<br>
+<span>Phoenix, Arizona<br/>
+August 31, 2016</span>
+</p>
+</div>
+<a class="djt-nav-section-link" href="https://www.youtube.com/watch?v=8froy8bbzlY"><img class="djt-nav-vid" src="http://img.youtube.com/vi/8froy8bbzlY/hqdefault.jpg"></a>
+<p class="djt-link-cont"><a class="djt-nav-section-link" href="https://www.youtube.com/watch?v=8froy8bbzlY">Click to Watch</a></p>
+</div>
+<div class="nav_section djt-nav-remarks">
+<h5>Remarks</h5>
+<div class="nav_content-title">
+<p>Donald Jay Trump: ADDRESS ON IMMIGRATION</p>
+</div>
+<p>Thank you, Phoenix. I am so glad to be back in Arizona, a state that has a very special place in my heart.<br/>
+<br/>
+I love the people of Arizona and, together, we are going to win the White House in November.<br/>
+<br/>
+Tonight is not going to be a normal rally speech.<br/>
+<br/>
+Instead, I am going to deliver a detailed policy address on one of the greatest challenges facing our country today: immigration.<br/>
+<br/>
+I have just landed having returned from a very important and special meeting with the President of Mexico – a man I like and respect very much, and a man who truly loves his country. Just like I am a man who loves the United States.<br/>
+<br/>
+We agreed on the importance of ending the illegal flow of drugs, cash, guns and people across our border, and to put the cartels out of business.</p>
+<p class="djt-link-cont">
+<a class="djt-nav-section-link" href="../../press-releases/donald-j.-trump-address-on-immigration.html">Read More</a>
+</p>
+</div>
+</div>
+<br class="clear">
+</div>
+</section>
+<div id="push"></div>
+</div>
+<div class="djt-popup-slider-container">
+<div class="djt-popup-close"><span>X</span></div>
+<div class="djt-popup-slider">
+<div class="slide-img-container">
+<img class="djt-big-slider" src="https://assets.donaldjtrump.com/_policies/sliders/3404/djt-policy-infographic-syrianrefugees__large.jpg">
+</div>
+<div class="slide-img-container">
+<img class="djt-big-slider" src="https://assets.donaldjtrump.com/_policies/sliders/3404/djt-policy-infographic-immigrants-2__large.jpg">
+</div>
+</div>
+</div>
+<script type="text/javascript">
+			$(function(){
+				$('.djt-popup-slider').slick({
+					dots: true,
+					infinite: true,
+					speed: 500,
+					fade: true,
+					cssEase: 'linear',
+				});
+				$('.slider-big-img').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					fade: true,
+					asNavFor: '.djt-popup-slider'
+				});
+				$('.slider-img-nav').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					asNavFor: '.slider-big-img',
+					dots: false,
+					centerMode: true,
+					focusOnSelect: true
+				});
+
+			});
+		</script>
+<footer>
+<div class="social">
+<a href="https://twitter.com/realdonaldtrump" class="social_item twitter" target="_blank">twitter</a>
+<a href="https://www.facebook.com/DonaldTrump" class="social_item facebook" target="_blank">facebook</a>
+<a href="https://instagram.com/realdonaldtrump/" class="social_item instagram" target="_blank">instagram</a>
+<a href="https://www.youtube.com/donaldtrump" class="social_item youtube" target="_blank">youtube</a>
+</div>
+<p><span class="white_box">Paid for by Donald Jay Trump for President, Inc.</span></p>
+<p style="margin-bottom: 5px;"><a href="../../contact/index.html">Contact The Campaign</a> - <a href="../../about/privacy-policy/index.html">Privacy Policy</a> - Tel: <a href="tel:6467361779">646-736-1779</a></p>
+<p style="margin: 0 0 5px 0;padding: 0 10%;width: 80%;">
+*By entering your mobile number you are agreeing to receive periodic text messages from Donald Jay Trump for President, Inc.<br>
+Message and data rates may apply. Text "STOP" to opt-out. T&C/Privacy Policy: <a href="../../sms-terms/88022.html" rel="nofollow">sms-terms/88022</a>
+</p>
+<!--<a href="http://www.parscale.com" id="web_developer">Web Design by Giles-Parscale</a>-->
+
+ 
+<script type="text/javascript">_satellite.pageBottom();</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 962628614;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/962628614/?value=0&guid=ON&script=0"/>
+</div>
+</noscript>
+ 
+<script src="https://platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">
+twttr.conversion.trackPid('nus1w', { tw_sale_amount: 0, tw_order_quantity: 0 });
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nus1w&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0"/>
+<img height="1" width="1" style="display:none;" alt="" src="https://t.co/i/adsct?txn_id=nus1w&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0"/>
+</noscript>
+ 
+</footer>
+<div id="popup_bkg"></div>
+<div id="popup_form_wrapper">
+<div id="popup_form">
+<div id="popup_close">
+<a href="index-|positions|immigration-reform.html#"><img src="https://assets.donaldjtrump.com/site/close.jpg" alt="Close"></a>
+</div>
+<div id="popup_top">
+<h2><span>Sign Up</span></h2>
+<h3>To Receive Updates From Donald Jay Trump</h3>
+</div>
+<div id="popup_form_items">
+<script type="text/javascript" src="../../themes/third_party/forms/forms_base.js"></script><form id="new_submission" class=" sign_up" method="post" action="https://www.donaldjtrump.com/policies/immigration" enctype="multipart/form-data">
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="20"/>
+<input type="hidden" name="ACTU" value="94"/>
+<input type="hidden" name="FDATA" value="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"/>
+<input type="hidden" name="site_id" value="1"/>
+<input type="hidden" name="csrf_token" value="8e98abb9a126aaf4f10099a8e14d3cc9686385a4"/>
+</div>
+<div class="dform"><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_1" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_text_input dftop_label field_first_name dform_required" id="forms_field_2" style=""><label class="dform_label" for="ddform_2">First Name <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[2]" value="" class="text required validate[required] " id="ddform_2" placeholder="" data-placeholder="" maxlength=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_last_name dform_required" id="forms_field_6" style=""><label class="dform_label" for="ddform_6">Last Name <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[6]" value="" class="text required validate[required] " id="ddform_6" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_10" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_email dftop_label field_email_address dform_required" id="forms_field_3" style=""><label class="dform_label" for="ddform_3">Email Address <span class="req">*</span></label><div class="dform_container"><input type="email" name="fields[3]" value="" class="text  required validate[required,custom[email]] " id="ddform_3" placeholder="" data-placeholder=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_mobile_number " id="forms_field_7" style=""><label class="dform_label" for="ddform_7">Mobile Number</label><div class="dform_container"><input type="text" name="fields[7]" value="" class="text " id="ddform_7" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_11" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_text_input dftop_label field_address " id="forms_field_4" style=""><label class="dform_label" for="ddform_4">Address</label><div class="dform_container"><input type="text" name="fields[4]" value="" class="text " id="ddform_4" placeholder="" data-placeholder="" maxlength=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_city " id="forms_field_8" style=""><label class="dform_label" for="ddform_8">City</label><div class="dform_container"><input type="text" name="fields[8]" value="" class="text " id="ddform_8" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_12" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_select dftop_label field_state dform_required" id="forms_field_5" style=""><label class="dform_label" for="ddform_5">State <span class="req">*</span></label><div class="dform_container"><select name="fields[5]" class=" required validate[required] " id="ddform_5">
+<option value="">Please Choose</option>
+<option value="Other">Other</option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AS">American Samoa</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="GU">Guam</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="MP">Northern Marianas</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="PR">Puerto Rico</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="VI">U.S. Virgin Islands</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+</select></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_zip_code dform_required" id="forms_field_9" style=""><label class="dform_label" for="ddform_9">Zip Code <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[9]" value="" class="text required validate[required] " id="ddform_9" placeholder="" data-placeholder="" maxlength="5"/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_27" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_checkbox dftop_label field_volunteer " id="forms_field_26" style=""><div class="dform_container"><ul class="checkboxes"><li><label for="fields[26]-0"><input type="checkbox" name="fields[26][]" value="Volunteer" class="" id="fields[26]-0"/>&nbsp; I Would Like to Volunteer</label></li></ul></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"></div><br clear="all"></div></div></div><div class="dform_element dform_mailinglist dftop_label field_mailinglist " id="forms_field_24" style=""><div class="dform_container"><ul class="checkboxes"><li><label><input type="checkbox" name="fields[24]" value="yes" checked="checked"/>&nbsp;Yes, please subscribe me to the Donald Jay Trump for President email list</label></li></ul></div></div><div class="dform_element dform_checkbox dftop_label field_text_messages " id="forms_field_240" style=""><div class="dform_container"><ul class="checkboxes"><li><label for="fields[240]-0"><input type="checkbox" name="fields[240][]" value="Yes" checked="checked" class="" id="fields[240]-0"/>&nbsp; Yes, please send me periodic text messages from Donald Jay Trump for President</label></li></ul></div></div><div class="dform_element dform_html field_untitled " id="forms_field_241" style=""><div class="dform_container"><em>By subscribing with your mobile number you are agreeing to receive periodic text messages from Donald Jay Trump for President, Inc. Message data rates may apply. Text "STOP" to opt-out. T&C/Privacy Policy: <a href="http://www.sms-terms.com/88022/" target="_blank">sms-terms.com/88022</a></em></div></div><div class="dform_element dform_textarea dftop_label field_comments " id="forms_field_23" style=""><label class="dform_label" for="ddform_23">Comments</label><div class="dform_container"><textarea name="fields[23]" cols="50" rows="4" class="" id="ddform_23" placeholder="" data-placeholder=""></textarea></div></div><div class="hiddenFields">
+<input type="hidden" name="fields[63]" value=""/>
+</div><div class="dform_element dform_captcha dftop_label field_captcha " id="forms_field_205" style=""><label class="dform_label" for="ddform_205">CAPTCHA</label><div class="dform_container"><div class="g-recaptcha" data-sitekey="6LfFRBsTAAAAAID_gT8DfxJs_9bZkSdvI3fl8ilA" data-theme="light" data-size="normal"></div><script type="text/javascript" src="https://www.google.com/recaptcha/api.js?"></script></div></div><div class="dform_element submit_button"> <div class="dform_container"><div class="dfinput_full"><input type="submit" class="submit" name="submit_button" value="Submit" data-value="Submit" data-wait="Verifying..."/></div></div></div></div></form>
+</div>
+</div>
+</div>
+</body>
+</html>

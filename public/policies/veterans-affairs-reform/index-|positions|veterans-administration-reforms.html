@@ -1,0 +1,436 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Veterans Affairs Reform | Donald J Trump for President</title>
+<meta name='keywords' content=''/>
+<meta name='description' content='Donald Jay Trump is the very definition of the American success story, continually setting the standards of excellence in business, real estate and entertainment. Show support for his presidential campaign here.'/>
+<link rel='canonical' href='../veterans-affairs-reform.html'/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="../../favicon-v=1.2.ico">
+<link rel="stylesheet" href="https://assets.donaldjtrump.com/screen04172016.css?10082016" type="text/css"/>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7COld+Standard+TT:400,700,400italic' rel='stylesheet' type='text/css'>
+ 
+<script src="https://assets.adobedtm.com/ccb66fd3556ba80512894ddaac0f1024ce58d90d/satelliteLib-dd574bd6e7e9efe3999269eb66caa610091049a9.js"></script>
+<!--[if IE]>
+<script src="../../js/html5shiv.js"></script>
+<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script async src="../../js/jquery.customSelect.min.js"></script>
+<script async src="https://vjs.zencdn.net/ie8/1.1.0/videojs-ie8.min.js"></script>
+<script async src="https://vjs.zencdn.net/5.0.2/video.min.js"></script>
+<script>
+	if (window.top !== window.self) window.top.location.replace(window.self.location.href);
+	$(function(){
+	    // Mobile Menu
+	    $('.mobile_menu_icon').on('click',function(){
+	        $(this).toggleClass('active');
+	        $('nav').slideToggle();
+	        return false;
+	    });
+	    // Popup Close
+		$('#popup_close a').on('click',function(){
+			$('#popup_bkg').hide();
+			$('#popup_form_wrapper').hide();
+			return false;
+		});
+		// Popup Form
+		$('a.pop_form').on('click',function(){
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+			$('#popup_bkg').show();
+			$('#popup_form_wrapper').fadeIn(500,function(){
+				if(!$('#popup_form_wrapper').hasClass('active')){
+					$('select').customSelect();
+					$('#popup_form_wrapper').addClass('active');
+				}
+			});
+			return false;
+		});
+
+	    // Form Submission Control
+	    $('#new_submission').on('submit', function(evt){
+	        $('#new_submission').find('span.error').remove();
+	        $('#popup_form_items input.submit').val('Sending... Wait');
+	        evt.preventDefault();
+	        var params = $('#new_submission').find(':input').serializeArray();
+	        $.ajax({
+	            dataType:'json',
+	            data: params,
+	            type: 'POST',
+	            success: function(data){
+	                if (data.success == 'yes'){
+	                	$('#popup_top').hide();
+	                	$('#popup_form_items').html('<h3>Thank You For Signing Up!</h3><h4>Join Us On Social Media</h4><div id="thank_you_social_buttons"><a href="https://twitter.com/realdonaldtrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/twitter.png" alt="Trump Twitter"></a><a href="https://www.facebook.com/DonaldTrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/facebook.png" alt="Trump Facebook"></a><a href="https://instagram.com/realdonaldtrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/instagram.png" alt="Trump Instagram"></a><a href="https://www.youtube.com/user/trump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/youtube.png" alt="Trump Youtube"></a></div>');
+	                } else{
+	                    for (var item in data.errors){
+	                    	if(data.errors[item].field_id == '205'){
+	                    		console.log('captcha');
+	                        	$('#forms_field_205').find('label').after("<span class='error'>You must check the captcha</span>");
+	                    	}else{
+	                        	var itemID = '#ddform_'+data.errors[item].field_id;
+		                        var type = $(itemID).attr('type');
+		                        var fieldLabel = $(itemID).closest('.dform_element').find('label').text().replace('*','');
+		                        var errMsg = fieldLabel+' is required';
+		                        if(type == 'email'){
+		                            errMsg = 'You must enter a valid email';
+		                        }
+		                        $(itemID).parent('.dform_container').append("<span class='error'>"+errMsg+"</span>");
+	                    	}
+	                    }
+	        			$('#popup_form_items input.submit').val('Submit');
+	                }
+	            }
+	        });
+	        return false;
+	    });
+
+	    // Form Error Remover
+		$('#new_submission input').on('focus',function(){$(this).next('span.error').remove();});
+
+	    // Form Error Remover(2)
+		$('#new_submission select').on('change',function(){$(this).parent('div').find('span.error').remove();});
+	});
+</script>
+<meta property="og:title" content="Veterans Affairs Reform">
+<meta property="og:image" content="">
+<link rel="stylesheet" type="text/css" href="../../js/slickslider/slick.css"/>
+<link rel="stylesheet" type="text/css" href="../../js/slickslider/slick-theme.css"/>
+<script type="text/javascript" src="../../js/slickslider/slick.min.js"></script>
+<style type="text/css">.press_item{}.press_item .djt-policy-date{font-family:'Old Standard TT',serif;text-align:center;font-size:14px;color:#464646;}.press_item .djt-policy-title{font-size:26px;color:#464646;text-align:center;font-family:'Old Standard TT',serif;}.djt-policy-section{margin:0 0 40px;}.djt-policy-section h3{font-size:14px;color:#464646;margin:25px 0 15px 0;}.djt-policy-section ul{margin:5px 5px 5px 15px;list-style:none;}.djt-policy-section ul li{margin:0 0 25px;font-size:14px;color:#464646;}.djt-policy-section ul li:before{content:"o ";color:#c8102e;font-size:5px;vertical-align:middle;background:#c8102e;border-radius:25px;padding:0 1px;margin:0 5px 0 0;}.djt-policy-section ul ul{margin:5px 5px 5px 25px;}.djt-policy-section ul ul li{margin:0 0 5px;}.press .main .container_right .nav_section h5{margin-bottom:15px;}.nav_section .nav_content-title{text-align:center;font-size:14px;background-color:#2b3260;margin:0 0 15px;}.nav_content-title p{color:#fff;font-weight:bold;line-height:16px;padding:10px 0;}.nav_content-title p span{font-size:12px;font-weight:normal;}.nav_section.djt-video-section{text-align:center;}.nav_section .djt-nav-vid{max-width:100%;}.nav_section.djt-policy-gallery{max-width:340px;margin:0 auto;}.nav_section.djt-nav-remarks p{line-height:normal;}.slider-big-img{max-width:290px;margin:0 auto;}.slider-img-nav .slide-img-container{width:75px;margin:5px 15px 15px;}.slider-img-nav img,.slider-big-img img{max-width:100%;}.slider-img-nav .slick-prev{bottom:-25px;top:inherit;width:75px;left:20%;}.slider-img-nav .slick-prev:before{content:'< Prev';color:#b20107;font-family:'Montserrat',sans-serif;font-size:14px;}.slider-img-nav .slick-next{bottom:-25px;top:inherit;width:75px;right:20%;}.slider-img-nav .slick-next:before{content:'Next >';color:#b20107;font-family:'Montserrat',sans-serif;font-size:14px;}.djt-popup-slider-container{position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;background-color:#000;display:none;}.djt-popup-slider-container .djt-popup-close{position:fixed;top:15px;right:15px;color:#fff;font-size:20px;}.djt-popup-slider-container .djt-popup-close:hover{cursor:pointer;}.djt-popup-slider{width:100%;max-width:40%;margin:100px auto 0;min-width:265px;}.djt-popup-slider img{max-width:100%;margin:0 auto;}.djt-popup-slider .slick-prev:before{color:#b20107;}.djt-popup-slider .slick-next:before{color:#b20107;}@media (min-width:768px) and (max-width:960px) {.slider-img-nav .slick-prev{left:0;}.slider-img-nav .slick-next{right:0;}}.djt-link-cont{text-align:center;}.djt-link-cont .djt-nav-section-link{text-decoration:underline;font-size:14px;}</style>
+<script type="text/javascript">
+		$(function(){
+			$('.djt-big-slider').on('click', function() {$('.djt-popup-slider-container').css('display','block');});
+			$('.djt-popup-close').on('click', function() {$('.djt-popup-slider-container').css('display','none');});
+		});
+		</script>
+</head>
+<body class="internal press">
+<div id="wrapper">
+ 
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M27JCG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M27JCG');</script>
+ 
+<noscript>
+<div style="padding: 2%; width: 75%; margin: 0 auto; text-align: center; font-size: 18px; line-height: 30px;">Your browser is NOT configured correctly to visit the Donald Jay Trump website. For full functionality and to utilize most of the website's capabilities you must have JavaScript enabled. Here are the <a href="http://www.enable-javascript.com" target="_blank"> instructions how to enable JavaScript in your web browser</a>.</div>
+</noscript>
+<style type="text/css">#top_container{background-color:#2b325f;height:25px;}header{background-color:#fff;}#wrapper{margin:0 auto -237px}#wrapper header{height:80px;border-top:none;border-bottom:none;}#wrapper header nav{background-color:#fff;}#wrapper header nav ul li.nav_donate{border-left:1px solid #c9c9c9;}#wrapper header nav ul li #nav_donate{background-color:#bc0000;color:#fff;}#wrapper header nav ul li a{color:#464646;}header nav ul li{border-left:1px solid #c9c9c9;}header nav ul li a{line-height:80px}header nav ul li ul{top:81px;background-image:none;}header .brand{top:4px;}header .brand:after{background:transparent;content:none;}#top_navigation ul li a{color:#fff;font-family:'Montserrat',serif!important;}.mobile_menu_icon{color:#bc0000!important;}.mobile_menu_icon span{background-color:#bc0000!important;}.mobile_menu_icon.active span{background-color:#fff!important;}.mobile_menu_icon span:before,.mobile_menu_icon span:after{background-color:#bc0000!important;}</style>
+ 
+<div id="top_container">
+<div id="top_navigation">
+<ul>
+<li><a href="../../schedule/index.html">Schedule</a></li>
+<li><a href="../../about/index.html">About</a></li>
+<li><a href="../../gallery/index.html">Gallery</a></li>
+</ul>
+</div>
+</div>
+<header>
+<div class="container">
+<div class="brand">
+<a href="../../index.html" title="Make America Great Again! | Donald J Trump for President">
+<img src="https://assets.donaldjtrump.com/vphome/tp_newer_logo.png" srcset="https://assets.donaldjtrump.com/vphome/tp_newer_logo@2x.png 2x" alt="Trump Pence Logo">
+</a>
+</div>
+<a class="mobile_menu_icon" href="javascript:;"><span></span></a>
+<nav>
+<ul>
+<li class="mobile_only"><a href="../../about.html">About</a></li>
+<li class="mobile_only"><a href="../../schedule.html">Schedule</a></li>
+<li class="mobile_only"><a href="../../issues.html">Issues</a></li>
+<li>
+<a href="../index.html" class="active">Positions</a>
+<ul style="width: 340px;">
+<li><a href="../../contract/index.html">Contract with the American Voter</a></li>
+<li><a href="../child-care/index.html">Child Care</a></li><li><a href="../constitution-and-second-amendment/index.html">Constitution and Second Amendment</a></li><li><a href="../cyber-security/index.html">Cybersecurity</a></li><li><a href="../economy/index.html">Economy</a></li><li><a href="../education/index.html">Education</a></li><li><a href="../energy/index.html">Energy</a></li><li><a href="../foreign-policy-and-defeating-isis/index.html">Foreign Policy and Defeating ISIS</a></li><li><a href="../health-care/index.html">Health Care</a></li><li><a href="../immigration/index.html">Immigration</a></li><li><a href="../an-americas-infrastructure-first-plan/index.html">INFRASTRUCTURE</a></li><li><a href="../national-defense/index.html">National Defense</a></li><li><a href="../regulations/index.html">Regulations</a></li><li><a href="../tax-plan/index.html">Tax Plan</a></li><li><a href="../trade/index.html">Trade</a></li><li><a href="index.html" class="active">Veterans Affairs Reform</a></li>
+</ul>
+</li>
+<li>
+<a href="../../states/index.html">States</a>
+<ul style="width: 200px;">
+<li><a href="../../states/arizona.html">Arizona</a></li><li><a href="../../states/colorado.html">Colorado</a></li><li><a href="../../states/florida.html">Florida</a></li><li><a href="../../states/georgia.html">Georgia</a></li><li><a href="../../states/indiana.html">Indiana</a></li><li><a href="../../states/iowa.html">Iowa</a></li><li><a href="../../states/maine.html">Maine</a></li><li><a href="../../states/michigan.html">Michigan</a></li><li><a href="../../states/minnesota.html">Minnesota</a></li><li><a href="../../states/nevada.html">Nevada</a></li><li><a href="../../states/new-hampshire.html">New Hampshire</a></li><li><a href="../../states/north-carolina.html">North Carolina</a></li><li><a href="../../states/ohio.html">Ohio</a></li><li><a href="../../states/pennsylvania.html">Pennsylvania</a></li><li><a href="../../states/virginia.html">Virginia</a></li>
+</ul>
+</li>
+<li><a href="index-|positions|veterans-administration-reforms.html#" class="pop_form">Get Involved</a></li>
+<li>
+<a href="../../media.html">Media</a>
+<ul style="width: 200px;">
+<li><a href="../../content-center/index.html">Content Center</a></li>
+<li><a href="../../media/category/in-the-news.html">In The News</a></li><li><a href="../../media/category/video.html">Video</a></li><li><a href="../../media/category/speeches.html">Speeches</a></li>
+<li><a href="../../press-releases/index.html">Press Releases</a></li>
+<li><a href="../../press-releases/category/endorsements/index.html">Endorsements</a></li>
+</ul>
+</li>
+<li class="mobile_only"><a href="../../press-releases.html">Press Releases</a></li>
+<li class="mobile_only"><a href="../../media/category/video.html">Video</a></li>
+<li class="mobile_only"><a href="../../gallery.html">Gallery</a></li>
+<li><a href="http://shop.donaldjtrump.com">Shop</a></li>
+<li><a href="https://secure.donaldjtrump.com/we-made-history?amount=150&utm_campaign=djt_website_donate&utm_source=website&utm_medium=web&utm_content=top_nav" id="nav_donate">Contribute</a></li>
+</ul>
+</nav>
+<br class="clear">
+</div>
+</header>
+<section class="banner">
+<div class="banner_message">
+<h1>Veterans Affairs Reform</h1>
+</div>
+<div class="banner_image">
+<img src="https://assets.donaldjtrump.com/site/about_banner2.jpg" alt="Internal Banner Image">
+</div>
+</section>
+<section class="main">
+<div class="container">
+<div class="container_left">
+<div class="press_item">
+<h2 class="djt-policy-title"></h2>
+<div class="djt-policy-section">
+<h3>Donald Jay Trump’S VISION</h3>
+<ul><li>Ensure our veterans get the care they need wherever and whenever they need it. No more long drives. No more waiting backlogs. No more excessive red tape. Just the care and support they earned with their service to our country.</li></ul><ul>
+<li>Support the whole veteran, not just their physical health care, but also by addressing their invisible wounds, investing in our service members' post-active duty success, transforming the VA to meet the needs of 21st century service members, and better meeting the needs of our female veterans.</li></ul><ul>
+<li>Make the VA great again by firing the corrupt and incompetent VA executives who let our veterans down, by modernizing the VA, and by empowering the doctors and nurses to ensure our veterans receive the best care available in a timely manner.</li></ul><p><u><strong>Donald Jay Trump's 10 Point Plan to Reform The Department of Veterans Affairs</strong></u></p><p>1. Appoint a VA Secretary whose sole purpose will be to serve veterans. Under a Trump Administration, the needs of&nbsp;D.C. bureaucrats will no longer&nbsp;be placed above those of our&nbsp;veterans.</p><p>2. Use the powers of the presidency to remove and discipline the federal employees and managers who have violated the public's trust and failed to carry out the duties on behalf of our veterans.</p><p>3. Ask that Congress pass legislation that empowers the Secretary of the VA to discipline or terminate any employee who has jeopardized the health, safety or well-being of a veteran.</p><p>4. Create a commission to investigate all the fraud, cover-ups, and wrong-doing that has taken place in the VA, and present these findings to Congress to spur legislative reform.</p><p>5. Protect and promote honest employees at the VA who highlight wrongdoing, and guarantee their jobs will be protected.</p><p>6. Create a private White House hotline, which will be active 24 hours a day answered by a real person. It will be devoted to answering veteran's complaints of wrongdoing at the VA and ensure no complaints fall through the cracks.</p><p>7. Stop giving bonuses to any VA employees who are wasting money, and start rewarding employees who seek to improve the VA's service, cut waste, and save lives.</p><p>8. Reform the visa system to ensure veterans are at the front of the line for health services, not the back.</p><p>9. Increase the number of mental health care professionals, and allow veteran's to be able to seek mental health care outside of the VA.</p><p>10. Ensure every veteran has the choice to seek care at the VA or at a private service provider of their own choice. Under a Trump Administration, no veteran will die waiting for service.</p><p><em>Read More on Donald Jay Trump’s 10 Point Plan to Reform The Department of Veterans Affairs,&nbsp;</em><a href="../../press-releases/icymi-trumps-ten-point-plan-to-reform-the-va.html">here</a><em>.</em></p><p><em>Read Mr. Trump's Remarks in <a href="../../press-releases/donald-j.-trump-america-first-means-veterans-first.html">Virginia Beach</a>, at the <a href="../../press-releases/remarks-at-the-veterans-of-foreign-wars-national-convention.html">Veterans of Foreign Wars National Convention</a>, and to the <a href="../../press-releases/donald-j.-trump-address-american-legion.html">American Legion</a>.</em></p>
+</div>
+<div class="djt-policy-section">
+<h3>KEY ISSUES</h3>
+<ul>
+<li>IG Report: 300,000 Vets Died While Waiting For Health Care At VA. [<a href="http://www.foxnews.com/politics/2015/09/03/ig-report-close-to-300000-vets-died-while-waiting-for-health-care-at-va.html">Fox News</a>, Sept. 3, 2015]</li></ul><ul>
+<li>Wait Lists Grow as Many More Veterans Seek Care and Funding Falls Far Short. [<a href="http://www.nytimes.com/2015/06/21/us/wahttp:/www.nytimes.com/2015/06/21/us/wait-lists-grow-as-many-more-veterans-seek-care-and-funding-falls-far-short.htmlit-lists-grow-as-many-more-veterans-seek-care-and-funding-falls-far-short.html">The New York Times</a>, June 20, 2015]</li></ul><ul> <li>Hundreds Of Appointment Wait Times Manipulated At Texas VA Facilities. [<a href="http://www.foxnews.com/politics/2016/06/21/hundreds-appointment-wait-times-manipulated-at-texas-va-facilities-watchdog-finds.html">Associated Press</a>, June 21, 2016]</li></ul><ul> <li>A Fatal Wait: Veterans Languish And Die On A VA Hospital's Secret List. [<a href="http://www.cnn.com/2014/04/23/health/veterans-dying-health-care-delays/">CNN</a>, April 23, 2014]</li></ul><ul> <li>Report Finds Sharp Increase In Veterans Denied V.A. Benefits. [<a href="http://www.nytimes.com/2016/03/30/us/report-finds-sharp-increase-in-veterans-denied-va-benefits.html">The New York Times</a>, March 20, 2016]</li></ul><ul> <li>Veterans Affairs Improperly Spent $6 Billion Annually, Senior Official Says. [<a href="https://www.washingtonpost.com/politics/va-improperly-spent-6-billion-on-care-for-veterans-senior-agency-leader-says/2015/05/13/ab8f131c-f5be-11e4-b2f3-af5479e6bbdd_story.html">The Washington Post</a>, May 14, 2015]</li></ul><ul> <li>U.S. Veterans Commit Suicide At Rate Of 20 A Day, VA Says. [<a href="http://www.wsj.com/articles/u-s-veterans-commit-suicide-at-rate-of-20-a-day-va-says-1467908311">The Wall Street Journal</a>, July 7, 2016]</li></ul><ul> <li>White House Review Of Veterans Administration Finds 'Corrosive Culture.' [<a href="http://www.reuters.com/article/usa-veterans-obama-idUSL2N0P81RT20140627">Reuters</a>, June 27, 2014]</li></ul><ul> <li>Few People Lost Jobs With V.A. in Scandal. [<a href="http://www.nytimes.com/2015/04/23/us/few-people-lost-jobs-with-va-in-scandal.html?_r=0">The New York Times</a>, April 22, 2015]</li></ul><ul> <li>Veterans Affairs Pays $142 Million In Bonuses Amid Scandals. [<a href="http://www.usatoday.com/story/news/politics/2015/11/11/veterans-affairs-pays-142-million-bonuses-amid-scandals/75537586/">USA Today</a>, May 22, 2014]</li></ul><ul> <li>VA Hasn't Fixed Wait-time Problems, GAO Finds. [<a href="http://www.usatoday.com/story/news/politics/2016/04/18/va-hasnt-fixed-wait-time-problems-gao-finds/83045046/">USA Today</a>, April 18, 2016]</li></ul>
+</div>
+<div class="djt-policy-section">
+<h3>CONTRAST WITH HILLARY CLINTON</h3>
+<ul>
+<li>Hillary Clinton Praised the Obama Administration for Its Handling of the VA Scandal. [<a href="about:blank">Donald Jay Trump Press Release</a>, Sept. 7, 2016]</li></ul><ul>
+<li>Hillary Clinton Offensively Downplayed VA’s Problems. [<a href="../../press-releases/clinton-offensively-downplayed-vas-problems-refused-to-apologize.html">Donald Jay Trump Press Release</a>, Sept. 7, 2016]</li></ul><ul>
+<li>Hillary Clinton Refused to Apologize for Insulting Our Veterans Through Her Defense of the Corrupt VA. [<a href="http://blogs.wsj.com/washwire/2015/10/28/republicans-take-aim-at-hillary-clinton-for-va-remarks/">The Wall Street Journal</a>, Oct. 28, 2015]</li></ul><ul>
+<li>The Chairman of the House Veterans’ Affairs Committee Recently Said Hillary Clinton Would Abandon VA Reforms. [<a href="http://www.militarytimes.com/story/military/election/2016/07/20/house-veterans-chairman-clinton-would-abandon-va-reform-proposals/87351512/">Military Times</a>, July 20, 2016]</li></ul>
+</div>
+</div>
+</div>
+<div class="container_right">
+<div class="nav_section djt-policy-gallery">
+<h5>Gallery</h5>
+<div class="nav_content-title">
+<p></p>
+</div>
+<div class="slider-big-img">
+<div class="slide-img-container">
+<img class="djt-big-slider" src="https://assets.donaldjtrump.com/_policies/sliders/3371/djt-policy-infographic-va__medium.jpg">
+</div>
+</div>
+<div class="slider-img-nav">
+<div class="slide-img-container">
+<img src="https://assets.donaldjtrump.com/_policies/sliders/3371/djt-policy-infographic-va__small.jpg">
+</div>
+</div>
+</div>
+<div class="djt-popup-slider-container">
+<div class="djt-popup-close"><span>X</span></div>
+<div class="djt-popup-slider">
+<div class="slide-img-container">
+<img src="">
+</div>
+</div>
+</div>
+<div class="nav_section djt-video-section">
+<h5>Video</h5>
+<div class="nav_content-title">
+<p>
+America First Means Veterans First<br>
+<span>Virginia Beach, Virginia<br/>
+July 11, 2016<br/>
+</span>
+</p>
+</div>
+<a class="djt-nav-section-link" href="https://www.youtube.com/watch?v=K4LxLqsnJFg#action=share"><img class="djt-nav-vid" src="http://img.youtube.com/vi/K4LxLqsnJFg/hqdefault.jpg"></a>
+<p class="djt-link-cont"><a class="djt-nav-section-link" href="https://www.youtube.com/watch?v=K4LxLqsnJFg#action=share">Click to Watch</a></p>
+</div>
+<div class="nav_section djt-nav-remarks">
+<h5>Remarks</h5>
+<div class="nav_content-title">
+<p>America First Means Veterans First</p>
+</div>
+<p>I’d like to thank Chairman Jeff Miller for his leadership on behalf of those who have served this country in military uniform, and for working with our campaign on developing real solutions for our great Veterans.<br/>
+<br/>
+Before going further today, however, I would first like to address the contributions of another group who serve this country in uniform: the men and women in blue.<br/>
+<br/>
+Our Police Officers rush into danger every day to protect our communities, and they often do it thanklessly and under relentless<br/>
+criticism.<br/>
+<br/>
+They save thousands of lives every year, perform countless public services every day, and yet their names will likely never appear in a<br/>
+single headline or media report.</p>
+<p class="djt-link-cont">
+<a class="djt-nav-section-link" href="https://assets.donaldjtrump.com/America_First_Means_Veterans_First.pdf">Read More</a>
+</p>
+</div>
+</div>
+<br class="clear">
+</div>
+</section>
+<div id="push"></div>
+</div>
+<div class="djt-popup-slider-container">
+<div class="djt-popup-close"><span>X</span></div>
+<div class="djt-popup-slider">
+<div class="slide-img-container">
+<img class="djt-big-slider" src="https://assets.donaldjtrump.com/_policies/sliders/3371/djt-policy-infographic-va__large.jpg">
+</div>
+</div>
+</div>
+<script type="text/javascript">
+			$(function(){
+				$('.djt-popup-slider').slick({
+					dots: true,
+					infinite: true,
+					speed: 500,
+					fade: true,
+					cssEase: 'linear',
+				});
+				$('.slider-big-img').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					fade: true,
+					asNavFor: '.djt-popup-slider'
+				});
+				$('.slider-img-nav').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					asNavFor: '.slider-big-img',
+					dots: false,
+					centerMode: true,
+					focusOnSelect: true
+				});
+
+			});
+		</script>
+<footer>
+<div class="social">
+<a href="https://twitter.com/realdonaldtrump" class="social_item twitter" target="_blank">twitter</a>
+<a href="https://www.facebook.com/DonaldTrump" class="social_item facebook" target="_blank">facebook</a>
+<a href="https://instagram.com/realdonaldtrump/" class="social_item instagram" target="_blank">instagram</a>
+<a href="https://www.youtube.com/donaldtrump" class="social_item youtube" target="_blank">youtube</a>
+</div>
+<p><span class="white_box">Paid for by Donald Jay Trump for President, Inc.</span></p>
+<p style="margin-bottom: 5px;"><a href="../../contact/index.html">Contact The Campaign</a> - <a href="../../about/privacy-policy/index.html">Privacy Policy</a> - Tel: <a href="tel:6467361779">646-736-1779</a></p>
+<p style="margin: 0 0 5px 0;padding: 0 10%;width: 80%;">
+*By entering your mobile number you are agreeing to receive periodic text messages from Donald Jay Trump for President, Inc.<br>
+Message and data rates may apply. Text "STOP" to opt-out. T&C/Privacy Policy: <a href="../../sms-terms/88022.html" rel="nofollow">sms-terms/88022</a>
+</p>
+<!--<a href="http://www.parscale.com" id="web_developer">Web Design by Giles-Parscale</a>-->
+
+ 
+<script type="text/javascript">_satellite.pageBottom();</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 962628614;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/962628614/?value=0&guid=ON&script=0"/>
+</div>
+</noscript>
+ 
+<script src="https://platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">
+twttr.conversion.trackPid('nus1w', { tw_sale_amount: 0, tw_order_quantity: 0 });
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nus1w&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0"/>
+<img height="1" width="1" style="display:none;" alt="" src="https://t.co/i/adsct?txn_id=nus1w&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0"/>
+</noscript>
+ 
+</footer>
+<div id="popup_bkg"></div>
+<div id="popup_form_wrapper">
+<div id="popup_form">
+<div id="popup_close">
+<a href="index-|positions|veterans-administration-reforms.html#"><img src="https://assets.donaldjtrump.com/site/close.jpg" alt="Close"></a>
+</div>
+<div id="popup_top">
+<h2><span>Sign Up</span></h2>
+<h3>To Receive Updates From Donald Jay Trump</h3>
+</div>
+<div id="popup_form_items">
+<script type="text/javascript" src="../../themes/third_party/forms/forms_base.js"></script><form id="new_submission" class=" sign_up" method="post" action="https://www.donaldjtrump.com/policies/veterans-affairs-reform" enctype="multipart/form-data">
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="20"/>
+<input type="hidden" name="ACTU" value="94"/>
+<input type="hidden" name="FDATA" value="k48YU6eGgb81h0NxdyhZzW6MdTngCvRoD3d/R8qTOn3ozXfxGwxa5p4u6kabAEdb4sd3V0J26I0L4GuP8WWP0vBECoGZI8hII6L5s+y2X18HoyLBMlrZIBYkAhD0TAIJYo2XrW/ULM7KA+rtMUXXeuC49AdQD609JsXLDRS4Q8lxN7P29CxULEjYGMRIq3cXOAjoS0eEHYSjKhabpj8gXcFA7gR/DUf98eQu69P543io6M6XKR1tEVXdob5RYmeKFbRZcc4PfWJpc2Ib4/LmxDxGybkDzhOHbTC/mvEkeWDs/yjOsVtRXDaPbG+AhSWbCNlknI7W+smjXPwVluNDDaR+0OjC1xCdrIgOoxbi0rkZ9YZNKhmo4Pydd7hvpb9jjWf2O1Rmsaqo+QoRAi4PKGs+u/8AGWuGABSvoEMnhlypQ04WRf0vs4tMTM+n/pBfqHqtiiDt9JPMLbe+MDckmi5VlHNbOY0TMJlBQcIMMFpX/kVl5iagEkximaJruUmkj9HlLVFayY2qTG5ClfBQnx3KDrXxsjxhd6NtFBwGClf3KTlL1uE2NaBIhm1f//NbWRHjBat+rZxWlkFX06fqJ8GP6Vc/E4wryFckN4oBpsaRuAx06UIl+ihyCPia96JiQihzg4zmO28vzf+XY5utmSOhs30Vy2zeBcl7dBQWLVdR3eItauyMmq5xjKcbqELyyBMjTMtDwBWSNdvDYV3CRoH+joNYicH0s02Ou63xUE8uWwyWf16azLUWKGrInKhCydIs+9izKIBvBgS+6yZmZ7vJYsbsCe2G1iDVntfmBAUGGkUbOCE9BuI/xydwuB0VgyEdXS9tIVOmbpeDVwgKljpipalk8KW0ZNdJNrh1l28gp4TsNXczu7BSiexEDloOptxeoMP1mFHFthEdUx+0MxJQRizD9/N9qjqfzoNBI7OQ7hjZ5mnDI33/gpo5KkrTp5VNbHTtPvriGv33E9I1xPw/uNebqienntmkig3w0CCnVCRriUE8koqtcl6JE+8Rm0fHn8d1IrDpa6JuNp7Df2vM44zy91QX1VgNpSAu77CeM8NcPDYDAS6D+t9Dx3NlwuhAzMpGgB74zOcaQ0+0g9qr3MBaa1rharznElpObtB8Mq3NgMxp9wU5v2y5pWYAhPyZsC2TwelMlpqhQNovFb3g9QZ+OjR6NYJRF9pea5S8EKI2M6qKm1QG7Il4ndY3c9PxFomH7ASi3/zXnICylMBrAoR80jhpNC4TYusyJKQRrGigiprvh3i8QUlldigFyfHeKwq9A9yu7QpcEM2R6MJaKSqqgGQEM2VSktQ3I1Y7KWpVvnc2d6Ga/SigKBUY1yOGxn92PdZkf2yiiDMWb+HQ0A0P6iZgNP2tWt2Hh9r2xenlBpcxGqvo3v1caaZb4loILn/0IoWJT5Sdu+edU4lu6qj79QNecvI9mHCDENN+/16r6Smn31qJOi29FF5XbkkRx7oziiQgis0/DNZMmrvz6Gspu8+MmifFrJ9asG6VpejoX11T5dakCzqjHrHGo79qsC6mrntZh/CctkIjLixJ5X4IMvsdpeHcpLdqx7o4nJF6QYu3S9AbdZg2oHIebDoMDHABKoc/ajfALs5PXvNbB3zX/ujRyXnayBCae+g+U+j32FPcQTTOP0qcxYbft4vXNcVi5qDk3vP0jk287+7QY7Np216cF15EA2iakX00DFgb3q5IwTHVj/8mw2NvXZZmNnz9baphKgCtinRU2sZ0CX1eX9gYbT+yIZycDW/5j23FurYPcwALm+l4If1/XtoteGEuOE5NLOqEP6ubKNSTNAyQatndXkZhoudr1HwG0ROgBVZzrcVeP/uuxzJeZTK6uI4BsScM9VBdKxL1gTEhiUhCHCHRih597h5NCtrB7NzVRhBqslGRfRdsaEsdbsNsJWNou3nWdAQ/HmQB0Hp/qe+2Yu4oVNQMorjceBX+LlH0lqpUp89Rym2BsCWDqS9ghjP2R0A6aK1z6BP1lqW4p1M0+9nlguy9ZlGGq300/Q2qFL1IkZs0OSEUQTxrl+1frCNaD9A4sGOukeO0ogyc81++ZX7vdA3ukFbtj+G84ZktTN17sS/3+NsGXCVKjc31sH627ezZNuEdQ6FFzfa3Yhl2Ve1OWU05hSIu2MbEi/YK3xrHR8sEcAi1FrI9I6ly5zsLtj6H5ERZ80si3F0a/nhVpoFXuOcljhVjUtvcQxPRwTbtBi91RvSnrlpipwyl/TYTYSs61H5RDd5jV4oluzX9zdsL+N2B+0Bpk2BtcUBUCTAYqS/s6je5/vvxHBBWmn1TQJRZilB803cMdnFW1h83Rnl+4HHdd5G4bkfEV9FzrLe2SrGcnZ+tEYTqz9uzhWx67Bhy41+JZKXXKMHlT2Bz2mcl0nqcoz7cLKQ1bVsDYNGJtIP/em+/9BLL1oCxgN/RfqlPaB9k9KJqfLvhSdns9fzYAKjOxSCuIRNMjn+etVie7gyPn2Vd3pgyecNJcX/ULULybiswbgWXC3A/Gmbr45F1PwpauQolIb5hmx06GZYlHLxzm9zHdlpCSFPO9kFcOYSLxxQZ9yj0SLMxFkb6qgM2+nsDsZhzs2e26p/g1lEWKwGyatyOl4ADOA6JPa/bQcv7471R69CZh75QhcT01fsLJORwSjUT8IfF1K5vdZvXczf7lojS5L6g80eLneiL7eff/B8qbU/DEEeNZxHsgiWF2lb3y8ZpD+5hFstP3ZxPOF07Vpwuqiir6KczhCHtjJVPXO84Ql/rBQeMF1S8DOiWLG9rzfP1KaUh7HexrjVZ4LC9VkQSJXShG4nKg5LnRzeYWPgdw1l0GgBgYx/e/kRvEaYFxO4TIQU3zzEc372pZlXEG+kr6oDK4lplI/4w3qk9jOobBO1KXCcRJfOnerCEzM53dp9yWhc07UAmqNdYRj7/hS2FtHEkDDnq9Wtfv9OqNVyMdwp0lSsm9EHTvQmAu14DXkenFw0SJx7Cw92PkMHDtNrkChsnIJQ65FCUu1QdlIWYHZ1tz71wjmvB4aGttrfnluXVYihLvxn6VrTGbJuxig2/ktpgDvVlH3xJffUpxewav/VYe75C18FILrwnAfVJCS9S/JMtFt6j1ORcRIeKHP1fDOOD7G10WosQ7vc59VxS4jXGrCwTPeP9234iHneZolQM5sH32fHxksxTuyMfx8blbUafjlZKhLp9EqeQhqWj8vXTM0zdTCdPBE9rGSR18O428qAIXr+PpmtmVhvGzl8L//I7tm1j5KC4n2x8frVv2rveD3EHqf9YsqILUWLoOeZNbKuTsjOhqVfYd9vEglOULqOUR6Jx6dSX6jn/LqY/Ipu8RXUkegqw56lfO3UZ7i6wbJDdt5F+hTZwxzOeT6IM754HyUjyDqLHsA6uikePiWUNYmOKe8hTDwrWjq9arDe07M9bESnKxhBWal4HhtMGb5lBKCxqbgQU7V89vUMq6CAp34prt3nXl9MMz6YnUoh2HafBC1aZA61IX1WssXI8Odn/tYh8U6ZJPqjZgeTQIsniqsZhGL11p988L8PMAnQoKcYdMjP7Ssznk3y9EP/HTwIrgqxc7RmFbGreCSs0v2O8WM5cPZ71CD9UycgQawtu2v9G2QC8UaJyAuHlKuUrzI2c8mKGML33uYcyfi+XfkBsGqk/6jAt7kiKpCnYwFdCgfG+WoRRopIM+HBNmmUNvZ6NC8cgUUbUgWCfyaOjMfuPLWwy6gPnbZoc4XOG+7Pbg2oFJENFlVSFov9g0ozN9obfW67+5wEvLsUZe3zRxN1q5sv1gK/cXE1ylDqCjaOED4qWHx0CvFb8D8t5yTK3Eq3I4yyjtNvFd7rhi4lJVk8hHGmGjDHYEx07HNxsT6iY8XcWf8VGqpgG6eUxsqMSXpIhWHipNu59akVhg+TUBCWQDBZ22/558VKnHp/LLLoqL1l89IHs3wxYXZ000WCMKknUxo4BQKV/q08RtWXjgSFpEYTw405JDSiHqj6L3U/b4K8gqE3l+k81qS7LWNv2UNKY8VBv2ch9KNN5+A5DXg9fh3BmlrJRQPi1Zj2LnyYNDIkcmQWDRoBnC79I62+pWuvwLh+RPENQCv6tRn5gLu9YsdQ8NQl2WKoUO+WhOBVKbLNCWhWT8zksQOjD51Eh4GNvFzfm4fzg/fjmw1j8C2uXtB/msxWic0U0MY8DZqjGmZ8MYqodZh5jbqRarallk5Gdg8c0FV9b95mKkazeAD4t7AXWyiTIogo4s2h5iFAbd80JdS0iy2OEpJb7YrwxeLKFkjpAj2YV1dqG0PHhIEgEJocvPEQJ/I8ZsvbsS+BigCdVi2M8tXRb9cyQn5sumVBFZPZLi+2gr2cSv/Qdw05BNYIJLlaznHcXP6+8sULfRsNyCNyq/gkMw1cmQ81BlN0xJFjgWy49Idt8rfhMmFNjCCt0haS3bNsDsacB3cbeop4ezUzwwRj4zAIrDPCCd4iwfeVE41p6yKJ/z3Ex91UCuLAFjsFd1jq+G2KvgGKj5TQFI6oSVwEEuG0hW/0TIZK9nTFEPkf25a9jpaz94mw04fpkwqraHFL+el+H3Yh1OqKMR+dHTn/oIxHjeGoGv/4T6pgbI8XD4XJCsjLL9UTzGiODbsvQ85zEz4X+DV1fGEMWYDPtBx/QpnW123IXPgE2AS1OvFce1p0eOXx/MR5gprWjKfp3QaEUJBzMgZeZVi2PnsEU7p7oriJHKBjE17oBGVpk1+3f0g2x1NXzH1oLlF8MuLova4ITrW3fMKJ3qgAJkGXNAoZmz6sL3qfZCJ8ebTyIHE75NxeFFiX3cpejsRssuTbrxPzr"/>
+<input type="hidden" name="site_id" value="1"/>
+<input type="hidden" name="csrf_token" value="f086522f627f9eeb3251e1feb11e4354cc7c9fac"/>
+</div>
+<div class="dform"><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_1" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_text_input dftop_label field_first_name dform_required" id="forms_field_2" style=""><label class="dform_label" for="ddform_2">First Name <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[2]" value="" class="text required validate[required] " id="ddform_2" placeholder="" data-placeholder="" maxlength=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_last_name dform_required" id="forms_field_6" style=""><label class="dform_label" for="ddform_6">Last Name <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[6]" value="" class="text required validate[required] " id="ddform_6" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_10" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_email dftop_label field_email_address dform_required" id="forms_field_3" style=""><label class="dform_label" for="ddform_3">Email Address <span class="req">*</span></label><div class="dform_container"><input type="email" name="fields[3]" value="" class="text  required validate[required,custom[email]] " id="ddform_3" placeholder="" data-placeholder=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_mobile_number " id="forms_field_7" style=""><label class="dform_label" for="ddform_7">Mobile Number</label><div class="dform_container"><input type="text" name="fields[7]" value="" class="text " id="ddform_7" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_11" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_text_input dftop_label field_address " id="forms_field_4" style=""><label class="dform_label" for="ddform_4">Address</label><div class="dform_container"><input type="text" name="fields[4]" value="" class="text " id="ddform_4" placeholder="" data-placeholder="" maxlength=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_city " id="forms_field_8" style=""><label class="dform_label" for="ddform_8">City</label><div class="dform_container"><input type="text" name="fields[8]" value="" class="text " id="ddform_8" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_12" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_select dftop_label field_state dform_required" id="forms_field_5" style=""><label class="dform_label" for="ddform_5">State <span class="req">*</span></label><div class="dform_container"><select name="fields[5]" class=" required validate[required] " id="ddform_5">
+<option value="">Please Choose</option>
+<option value="Other">Other</option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AS">American Samoa</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="GU">Guam</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="MP">Northern Marianas</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="PR">Puerto Rico</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="VI">U.S. Virgin Islands</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+</select></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_zip_code dform_required" id="forms_field_9" style=""><label class="dform_label" for="ddform_9">Zip Code <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[9]" value="" class="text required validate[required] " id="ddform_9" placeholder="" data-placeholder="" maxlength="5"/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_27" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_checkbox dftop_label field_volunteer " id="forms_field_26" style=""><div class="dform_container"><ul class="checkboxes"><li><label for="fields[26]-0"><input type="checkbox" name="fields[26][]" value="Volunteer" class="" id="fields[26]-0"/>&nbsp; I Would Like to Volunteer</label></li></ul></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"></div><br clear="all"></div></div></div><div class="dform_element dform_mailinglist dftop_label field_mailinglist " id="forms_field_24" style=""><div class="dform_container"><ul class="checkboxes"><li><label><input type="checkbox" name="fields[24]" value="yes" checked="checked"/>&nbsp;Yes, please subscribe me to the Donald Jay Trump for President email list</label></li></ul></div></div><div class="dform_element dform_checkbox dftop_label field_text_messages " id="forms_field_240" style=""><div class="dform_container"><ul class="checkboxes"><li><label for="fields[240]-0"><input type="checkbox" name="fields[240][]" value="Yes" checked="checked" class="" id="fields[240]-0"/>&nbsp; Yes, please send me periodic text messages from Donald Jay Trump for President</label></li></ul></div></div><div class="dform_element dform_html field_untitled " id="forms_field_241" style=""><div class="dform_container"><em>By subscribing with your mobile number you are agreeing to receive periodic text messages from Donald Jay Trump for President, Inc. Message data rates may apply. Text "STOP" to opt-out. T&C/Privacy Policy: <a href="http://www.sms-terms.com/88022/" target="_blank">sms-terms.com/88022</a></em></div></div><div class="dform_element dform_textarea dftop_label field_comments " id="forms_field_23" style=""><label class="dform_label" for="ddform_23">Comments</label><div class="dform_container"><textarea name="fields[23]" cols="50" rows="4" class="" id="ddform_23" placeholder="" data-placeholder=""></textarea></div></div><div class="hiddenFields">
+<input type="hidden" name="fields[63]" value=""/>
+</div><div class="dform_element dform_captcha dftop_label field_captcha " id="forms_field_205" style=""><label class="dform_label" for="ddform_205">CAPTCHA</label><div class="dform_container"><div class="g-recaptcha" data-sitekey="6LfFRBsTAAAAAID_gT8DfxJs_9bZkSdvI3fl8ilA" data-theme="light" data-size="normal"></div><script type="text/javascript" src="https://www.google.com/recaptcha/api.js?"></script></div></div><div class="dform_element submit_button"> <div class="dform_container"><div class="dfinput_full"><input type="submit" class="submit" name="submit_button" value="Submit" data-value="Submit" data-wait="Verifying..."/></div></div></div></div></form>
+</div>
+</div>
+</div>
+</body>
+</html>
