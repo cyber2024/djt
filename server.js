@@ -4,7 +4,7 @@ var router = require(process.cwd()+'/routes/routes.js');
 
 app.use('/public',express.static(process.cwd() + '/public'));
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 
 router(app);
 
